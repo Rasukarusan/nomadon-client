@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
+		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
+		176E6C4522FA8FF400EB0598 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6C4422FA8FF400EB0598 /* Util.swift */; };
+		176E6C4722FA967100EB0598 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4622FA967100EB0598 /* CalculateCalendarLogic.framework */; };
+		176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */; };
 		1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216022FA80FA00CA0B32 /* AppDelegate.swift */; };
 		1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216222FA80FA00CA0B32 /* ViewController.swift */; };
 		1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216422FA80FA00CA0B32 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		176E6C4122FA8E0200EB0598 /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = Carthage/Build/iOS/FSCalendar.framework; sourceTree = "<group>"; };
+		176E6C4422FA8FF400EB0598 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		176E6C4622FA967100EB0598 /* CalculateCalendarLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalculateCalendarLogic.framework; path = Carthage/Build/iOS/CalculateCalendarLogic.framework; sourceTree = "<group>"; };
+		176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		1791215D22FA80FA00CA0B32 /* nomadon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nomadon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1791216022FA80FA00CA0B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1791216222FA80FA00CA0B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176E6C4722FA967100EB0598 /* CalculateCalendarLogic.framework in Frameworks */,
+				176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */,
 				176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */,
 				176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */,
 			);
@@ -84,11 +94,29 @@
 		176E6C3922FA885B00EB0598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				176E6C4622FA967100EB0598 /* CalculateCalendarLogic.framework */,
+				176E6C4122FA8E0200EB0598 /* FSCalendar.framework */,
 				176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */,
 				176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */,
 				176E6C3A22FA885B00EB0598 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		176E6C4322FA8FD900EB0598 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				176E6C4422FA8FF400EB0598 /* Util.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		176E6C4822FA997400EB0598 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		1791215422FA80FA00CA0B32 = {
@@ -117,6 +145,8 @@
 			children = (
 				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
 				1791216222FA80FA00CA0B32 /* ViewController.swift */,
+				176E6C4822FA997400EB0598 /* models */,
+				176E6C4322FA8FD900EB0598 /* util */,
 				1791216422FA80FA00CA0B32 /* Main.storyboard */,
 				1791216722FA80FC00CA0B32 /* Assets.xcassets */,
 				1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */,
@@ -281,6 +311,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CalculateCalendarLogic.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -298,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */,
+				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
+				176E6C4522FA8FF400EB0598 /* Util.swift in Sources */,
 				1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
