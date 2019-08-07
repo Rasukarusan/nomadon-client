@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  nomadon
+
+  Created by tanaka naoto on 2019/08/07.
+  Copyright © 2019 tanaka.naoto. All rights reserved.
+*/
+
+// MARK: - Global
+"ok" = "OK";
+"cancel" = "キャンセル";
+"close" = "閉じる";
+
+// MARK: - Calendar
+"headerDateFormat" = "YYYY年MM月";

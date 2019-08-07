@@ -13,15 +13,10 @@ import CalculateCalendarLogic
 class ViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
     
     fileprivate weak var calendar: FSCalendar!
-    fileprivate let gregorian = Calendar(identifier: .gregorian)
-    fileprivate let formatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Localizable.Global.ok.localized)
     }
     
     /**
@@ -60,7 +55,7 @@ class ViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,F
         calendar.dataSource = self
         calendar.delegate = self
         calendar.setScope(.week, animated: true)
-        calendar.appearance.headerDateFormat = "yyyy/MM"
+        calendar.appearance.headerDateFormat = Localizable.Calendar.headerDateFormat.localized
         view.addSubview(calendar)
         self.calendar = calendar
     }
