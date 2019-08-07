@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
+		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216022FA80FA00CA0B32 /* AppDelegate.swift */; };
 		1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216222FA80FA00CA0B32 /* ViewController.swift */; };
 		1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216422FA80FA00CA0B32 /* Main.storyboard */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		1791215D22FA80FA00CA0B32 /* nomadon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nomadon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1791216022FA80FA00CA0B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1791216222FA80FA00CA0B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */,
+				176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176E6C3922FA885B00EB0598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */,
+				176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */,
+				176E6C3A22FA885B00EB0598 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1791215422FA80FA00CA0B32 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,7 @@
 				1791217422FA80FC00CA0B32 /* nomadonTests */,
 				1791217F22FA80FC00CA0B32 /* nomadonUITests */,
 				1791215E22FA80FA00CA0B32 /* Products */,
+				176E6C3922FA885B00EB0598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +153,7 @@
 				1791215922FA80FA00CA0B32 /* Sources */,
 				1791215A22FA80FA00CA0B32 /* Frameworks */,
 				1791215B22FA80FA00CA0B32 /* Resources */,
+				176E6C3C22FA886F00EB0598 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +269,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176E6C3C22FA886F00EB0598 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1791215922FA80FA00CA0B32 /* Sources */ = {
@@ -434,6 +475,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9598586LS5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = nomadon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +497,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9598586LS5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = nomadon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
