@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216022FA80FA00CA0B32 /* AppDelegate.swift */; };
+		1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216222FA80FA00CA0B32 /* ViewController.swift */; };
+		1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216422FA80FA00CA0B32 /* Main.storyboard */; };
+		1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1791216722FA80FC00CA0B32 /* Assets.xcassets */; };
+		1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */; };
+		1791217622FA80FC00CA0B32 /* nomadonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791217522FA80FC00CA0B32 /* nomadonTests.swift */; };
+		1791218122FA80FC00CA0B32 /* nomadonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791218022FA80FC00CA0B32 /* nomadonUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1791217222FA80FC00CA0B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1791215522FA80FA00CA0B32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1791215C22FA80FA00CA0B32;
+			remoteInfo = nomadon;
+		};
+		1791217D22FA80FC00CA0B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1791215522FA80FA00CA0B32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1791215C22FA80FA00CA0B32;
+			remoteInfo = nomadon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1791215D22FA80FA00CA0B32 /* nomadon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nomadon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1791216022FA80FA00CA0B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1791216222FA80FA00CA0B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1791216522FA80FA00CA0B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1791216722FA80FC00CA0B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1791216A22FA80FC00CA0B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1791216C22FA80FC00CA0B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1791217122FA80FC00CA0B32 /* nomadonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomadonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1791217522FA80FC00CA0B32 /* nomadonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomadonTests.swift; sourceTree = "<group>"; };
+		1791217722FA80FC00CA0B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1791217C22FA80FC00CA0B32 /* nomadonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomadonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1791218022FA80FC00CA0B32 /* nomadonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomadonUITests.swift; sourceTree = "<group>"; };
+		1791218222FA80FC00CA0B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1791215A22FA80FA00CA0B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791216E22FA80FC00CA0B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791217922FA80FC00CA0B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1791215422FA80FA00CA0B32 = {
+			isa = PBXGroup;
+			children = (
+				1791215F22FA80FA00CA0B32 /* nomadon */,
+				1791217422FA80FC00CA0B32 /* nomadonTests */,
+				1791217F22FA80FC00CA0B32 /* nomadonUITests */,
+				1791215E22FA80FA00CA0B32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1791215E22FA80FA00CA0B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1791215D22FA80FA00CA0B32 /* nomadon.app */,
+				1791217122FA80FC00CA0B32 /* nomadonTests.xctest */,
+				1791217C22FA80FC00CA0B32 /* nomadonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1791215F22FA80FA00CA0B32 /* nomadon */ = {
+			isa = PBXGroup;
+			children = (
+				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
+				1791216222FA80FA00CA0B32 /* ViewController.swift */,
+				1791216422FA80FA00CA0B32 /* Main.storyboard */,
+				1791216722FA80FC00CA0B32 /* Assets.xcassets */,
+				1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */,
+				1791216C22FA80FC00CA0B32 /* Info.plist */,
+			);
+			path = nomadon;
+			sourceTree = "<group>";
+		};
+		1791217422FA80FC00CA0B32 /* nomadonTests */ = {
+			isa = PBXGroup;
+			children = (
+				1791217522FA80FC00CA0B32 /* nomadonTests.swift */,
+				1791217722FA80FC00CA0B32 /* Info.plist */,
+			);
+			path = nomadonTests;
+			sourceTree = "<group>";
+		};
+		1791217F22FA80FC00CA0B32 /* nomadonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1791218022FA80FC00CA0B32 /* nomadonUITests.swift */,
+				1791218222FA80FC00CA0B32 /* Info.plist */,
+			);
+			path = nomadonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1791215C22FA80FA00CA0B32 /* nomadon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1791218522FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadon" */;
+			buildPhases = (
+				1791215922FA80FA00CA0B32 /* Sources */,
+				1791215A22FA80FA00CA0B32 /* Frameworks */,
+				1791215B22FA80FA00CA0B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nomadon;
+			productName = nomadon;
+			productReference = 1791215D22FA80FA00CA0B32 /* nomadon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1791217022FA80FC00CA0B32 /* nomadonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1791218822FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadonTests" */;
+			buildPhases = (
+				1791216D22FA80FC00CA0B32 /* Sources */,
+				1791216E22FA80FC00CA0B32 /* Frameworks */,
+				1791216F22FA80FC00CA0B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1791217322FA80FC00CA0B32 /* PBXTargetDependency */,
+			);
+			name = nomadonTests;
+			productName = nomadonTests;
+			productReference = 1791217122FA80FC00CA0B32 /* nomadonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1791217B22FA80FC00CA0B32 /* nomadonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1791218B22FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadonUITests" */;
+			buildPhases = (
+				1791217822FA80FC00CA0B32 /* Sources */,
+				1791217922FA80FC00CA0B32 /* Frameworks */,
+				1791217A22FA80FC00CA0B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1791217E22FA80FC00CA0B32 /* PBXTargetDependency */,
+			);
+			name = nomadonUITests;
+			productName = nomadonUITests;
+			productReference = 1791217C22FA80FC00CA0B32 /* nomadonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1791215522FA80FA00CA0B32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = tanaka.naoto;
+				TargetAttributes = {
+					1791215C22FA80FA00CA0B32 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					1791217022FA80FC00CA0B32 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 1791215C22FA80FA00CA0B32;
+					};
+					1791217B22FA80FC00CA0B32 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 1791215C22FA80FA00CA0B32;
+					};
+				};
+			};
+			buildConfigurationList = 1791215822FA80FA00CA0B32 /* Build configuration list for PBXProject "nomadon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1791215422FA80FA00CA0B32;
+			productRefGroup = 1791215E22FA80FA00CA0B32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1791215C22FA80FA00CA0B32 /* nomadon */,
+				1791217022FA80FC00CA0B32 /* nomadonTests */,
+				1791217B22FA80FC00CA0B32 /* nomadonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1791215B22FA80FA00CA0B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
+				1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */,
+				1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791216F22FA80FC00CA0B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791217A22FA80FC00CA0B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1791215922FA80FA00CA0B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */,
+				1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791216D22FA80FC00CA0B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1791217622FA80FC00CA0B32 /* nomadonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1791217822FA80FC00CA0B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1791218122FA80FC00CA0B32 /* nomadonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1791217322FA80FC00CA0B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1791215C22FA80FA00CA0B32 /* nomadon */;
+			targetProxy = 1791217222FA80FC00CA0B32 /* PBXContainerItemProxy */;
+		};
+		1791217E22FA80FC00CA0B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1791215C22FA80FA00CA0B32 /* nomadon */;
+			targetProxy = 1791217D22FA80FC00CA0B32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1791216422FA80FA00CA0B32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1791216522FA80FA00CA0B32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1791216A22FA80FC00CA0B32 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1791218322FA80FC00CA0B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1791218422FA80FC00CA0B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1791218622FA80FC00CA0B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1791218722FA80FC00CA0B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1791218922FA80FC00CA0B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nomadon.app/nomadon";
+			};
+			name = Debug;
+		};
+		1791218A22FA80FC00CA0B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nomadon.app/nomadon";
+			};
+			name = Release;
+		};
+		1791218C22FA80FC00CA0B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nomadon;
+			};
+			name = Debug;
+		};
+		1791218D22FA80FC00CA0B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9598586LS5;
+				INFOPLIST_FILE = nomadonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanaka.naoto.nomadonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nomadon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1791215822FA80FA00CA0B32 /* Build configuration list for PBXProject "nomadon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1791218322FA80FC00CA0B32 /* Debug */,
+				1791218422FA80FC00CA0B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1791218522FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1791218622FA80FC00CA0B32 /* Debug */,
+				1791218722FA80FC00CA0B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1791218822FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1791218922FA80FC00CA0B32 /* Debug */,
+				1791218A22FA80FC00CA0B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1791218B22FA80FC00CA0B32 /* Build configuration list for PBXNativeTarget "nomadonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1791218C22FA80FC00CA0B32 /* Debug */,
+				1791218D22FA80FC00CA0B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1791215522FA80FA00CA0B32 /* Project object */;
+}
