@@ -20,6 +20,8 @@
 		1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */; };
 		1791217622FA80FC00CA0B32 /* nomadonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791217522FA80FC00CA0B32 /* nomadonTests.swift */; };
 		1791218122FA80FC00CA0B32 /* nomadonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791218022FA80FC00CA0B32 /* nomadonUITests.swift */; };
+		17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B406EE22FADB7F0069B990 /* Localizable.strings */; };
+		17B406F122FADC3B0069B990 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B406F022FADC3B0069B990 /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		1791217C22FA80FC00CA0B32 /* nomadonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomadonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1791218022FA80FC00CA0B32 /* nomadonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomadonUITests.swift; sourceTree = "<group>"; };
 		1791218222FA80FC00CA0B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B406ED22FADB7F0069B990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17B406EF22FADBB30069B990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17B406F022FADC3B0069B990 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				176E6C4422FA8FF400EB0598 /* Util.swift */,
+				17B406F022FADC3B0069B990 /* Localizable.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 				1791216722FA80FC00CA0B32 /* Assets.xcassets */,
 				1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */,
 				1791216C22FA80FC00CA0B32 /* Info.plist */,
+				17B406EE22FADB7F0069B990 /* Localizable.strings */,
 			);
 			path = nomadon;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 1791215422FA80FA00CA0B32;
 			productRefGroup = 1791215E22FA80FA00CA0B32 /* Products */;
@@ -279,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
+				17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */,
 				1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */,
 				1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */,
 			);
@@ -331,6 +340,7 @@
 			files = (
 				1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
+				17B406F122FADC3B0069B990 /* Localizable.swift in Sources */,
 				176E6C4522FA8FF400EB0598 /* Util.swift in Sources */,
 				1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */,
 			);
@@ -384,6 +394,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		17B406EE22FADB7F0069B990 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17B406ED22FADB7F0069B990 /* en */,
+				17B406EF22FADBB30069B990 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -391,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -452,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -514,6 +535,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = nomadon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,6 +558,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = nomadon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
