@@ -8,12 +8,12 @@
 
 import Foundation
 import CalculateCalendarLogic
-import FSCalendar
 
 class CalendarModel {
 
     /**
      * 祝日判定
+     * TODO: 多言語対応時、日本の祝日が表示されてしまうので他国では表示しないようにする
      * @return Bool true: 祝日, false: 祝日ではない
      */
     final class func isHoliday(_ date: Date) -> Bool {
