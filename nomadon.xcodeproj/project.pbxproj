@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171E680022FEAFBF00837B3A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E67FF22FEAFBF00837B3A /* edit.png */; };
+		17391B2A22FEC5120019329D /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B2922FEC5120019329D /* ClockView.swift */; };
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171E67FF22FEAFBF00837B3A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		17391B2922FEC5120019329D /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -96,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17391B2B22FEC5170019329D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17391B2922FEC5120019329D /* ClockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		176E6C3922FA885B00EB0598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +161,10 @@
 		1791215F22FA80FA00CA0B32 /* nomadon */ = {
 			isa = PBXGroup;
 			children = (
+				171E67FF22FEAFBF00837B3A /* edit.png */,
 				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
 				1791216222FA80FA00CA0B32 /* ViewController.swift */,
+				17391B2B22FEC5170019329D /* View */,
 				176E6C4822FA997400EB0598 /* models */,
 				176E6C4322FA8FD900EB0598 /* util */,
 				1791216422FA80FA00CA0B32 /* Main.storyboard */,
@@ -287,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
+				171E680022FEAFBF00837B3A /* edit.png in Resources */,
 				17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */,
 				1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */,
 				1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */,
@@ -339,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */,
+				17391B2A22FEC5120019329D /* ClockView.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
 				17B406F122FADC3B0069B990 /* Localizable.swift in Sources */,
 				176E6C4522FA8FF400EB0598 /* Util.swift in Sources */,
