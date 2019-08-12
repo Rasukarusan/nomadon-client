@@ -1,76 +1,21 @@
 //
-//  ViewController.swift
+//  ViewControlle+UI.swift
 //  nomadon
 //
-//  Created by tanaka naoto on 2019/08/07.
+//  Created by tanaka naoto on 2019/08/10.
 //  Copyright © 2019 tanaka.naoto. All rights reserved.
 //
 
 import UIKit
 import FSCalendar
 
-class ViewController: UIViewController,FSCalendarDelegateAppearance {
-    
-    fileprivate weak var calendar: FSCalendar!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    /**
-     * カレンダータップ時の処理
-     */
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
-        print(date)
-    }
+extension TopViewController {
+    @objc func buildUI() {
+        let fontRicty = Util.getFontName()
+        let fontRictyBold = Util.getFontName(isBold: true)
+        let paddingLeft : CGFloat = 10.0
 
-    /**
-     * 日付の文字色を設定
-     * @return UIColor?
-     */
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        return self.getColorForDate(date)
-    }
-    
-    /**
-     * 日付の文字色を設定
-     * @return UIColor?
-     */
-    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-        return "4.5h"
-    }
-    
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 0
-    }
-    
-    
-    
-    /**
-     * 日付の文字色を取得する
-     * 土/日/祝日で色を変える
-     * @return UIColor?
-     */
-    private func getColorForDate(_ date: Date) -> UIColor?{
-        let weekIdx = CalendarModel.getWeekIdx(date)
-        if CalendarModel.isHoliday(date) || weekIdx == 1 {
-            return .red
-        } else if weekIdx == 7 {
-            return .blue
-        }
-        return nil
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        buildUI()
-    }
-}
-
-extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
-    func buildUI() {
         // カレンダー
-        let calendar = FSCalendar()
         calendar.frame = CGRect(
             x: 0,
             y: self.view.frame.height/2 - Util.getSafeAreaBottom(),
@@ -82,12 +27,14 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         calendar.setScope(.week, animated: true)
         calendar.appearance.subtitleOffset = CGPoint(x: 0, y: 10)
         calendar.appearance.borderRadius = 10
-        
+        calendar.appearance.headerTitleFont = UIFont(name: fontRicty,size: 18)
+        calendar.appearance.weekdayFont = UIFont(name: fontRicty, size: 18)
+        calendar.appearance.titleFont = UIFont(name: fontRicty, size: 18)
         calendar.appearance.headerDateFormat = Localizable.Calendar.headerDateFormat.localized
+        calendar.appearance.subtitleSelectionColor = .black
+        calendar.appearance.subtitleTodayColor = .black
         self.view.addSubview(calendar)
-        self.calendar = calendar
         
-        let paddingLeft : CGFloat = 10.0
         // 詳細画面
         let dayDetailView = UIView()
         dayDetailView.frame = CGRect(
@@ -104,10 +51,21 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         self.view.addSubview(dayDetailView)
         
         let tmpColor : UIColor = .white
+        
+        // タイトル左のアイコン
+        let iconImgView = UIImageView()
+        iconImgView.frame = CGRect(
+            x:paddingLeft,
+            y:dayDetailView.frame.height/20,
+            width:20,
+            height:20
+        )
+        iconImgView.image = UIImage(named:"edit")
+        dayDetailView.addSubview(iconImgView)
+        
         // タイトル
-        let dayDetailTitle = UILabel()
         dayDetailTitle.frame = CGRect(
-            x: paddingLeft,
+            x: iconImgView.frame.maxX + paddingLeft,
             y: dayDetailView.frame.height/20,
             width: dayDetailView.frame.width - paddingLeft*2,
             height: dayDetailView.frame.height/10
@@ -115,10 +73,11 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         dayDetailTitle.backgroundColor = tmpColor
         dayDetailTitle.textColor = UIColor(red: 0.1441, green: 0.3364, blue: 0.8777, alpha: 1)
         dayDetailTitle.text = "2019年8月15日"
-        dayDetailTitle.font = UIFont.boldSystemFont(ofSize: 18)
+        dayDetailTitle.font = UIFont(name: fontRictyBold, size: 18)
+        dayDetailTitle.sizeToFit()
         dayDetailView.addSubview(dayDetailTitle)
         
-        // 作業時間
+        // 時計
         // ClockView()をそのままcenter.xなどで移動すると、円だけが移動してしまうため
         // ClockView()を載せるためのViewを作り、それを移動させる手段を取った
         let clockView = UIView()
@@ -143,7 +102,7 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         clock.radius = clock.frame.width/3
         clockView.addSubview(clock)
         
-        let dayDetailHour = UILabel()
+        // 作業時間
         dayDetailHour.frame = CGRect(
             x: 0,
             y: dayDetailTitle.frame.maxY,
@@ -155,14 +114,14 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         dayDetailHour.textColor = .black
         dayDetailHour.text = "5.5h"
         dayDetailHour.textAlignment = .center
-        dayDetailHour.font = UIFont.systemFont(ofSize: self.view.frame.height/30)
+        dayDetailHour.font = UIFont(name: fontRicty, size: self.view.frame.height/30)
         dayDetailView.addSubview(dayDetailHour)
         
         // 詳細
         let detailScrollView = UIScrollView()
         detailScrollView.frame = CGRect(
             x: paddingLeft,
-            y: dayDetailHour.frame.maxY,
+            y: dayDetailHour.frame.maxY + dayDetailView.frame.height/20,
             width: dayDetailView.frame.width - paddingLeft*2,
             height: dayDetailView.frame.height - dayDetailHour.frame.maxY
         )
@@ -172,7 +131,6 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         dayDetailView.addSubview(detailScrollView)
         
         // 詳細の1つ
-        let detail = UILabel()
         detail.frame = CGRect(
             x: 0,
             y: 0,
@@ -182,31 +140,40 @@ extension ViewController : FSCalendarDataSource, FSCalendarDelegate{
         detail.backgroundColor = tmpColor
         detail.textColor = .black
         detail.text = "・個人アプリ開発\n・カレンダー機能の実装\n・Golangでサーバー作り"
-        detail.font = UIFont.systemFont(ofSize: 18)
+        detail.font = UIFont(name: fontRicty, size:18)
         detail.numberOfLines = 0
         detail.sizeToFit()
         detailScrollView.addSubview(detail)
         
         // 編集ボタン
-        let editBtn = UIButton()
         editBtn.frame = CGRect(
             x: 0,
             y: dayDetailView.frame.maxY - dayDetailView.frame.width/16,
             width: dayDetailView.frame.width/8,
             height: dayDetailView.frame.width/8
         )
-        
         editBtn.center.x = dayDetailView.center.x
         editBtn.backgroundColor = .white
         editBtn.layer.borderWidth = 1.0
-        
         editBtn.setImage(UIImage(named:"edit"), for: .normal)
         editBtn.imageView?.contentMode = .scaleAspectFit
         editBtn.contentHorizontalAlignment = .fill
         editBtn.contentVerticalAlignment = .fill
         editBtn.layer.cornerRadius = editBtn.frame.width/2
-        let edge : CGFloat = 10.0
+        let edge : CGFloat = 10
         editBtn.imageEdgeInsets = UIEdgeInsets(top: edge, left: edge, bottom: edge, right: edge);
         self.view.addSubview(editBtn)
+    }
+    
+    func createLeftIconText(imgName: String, text: String) -> NSAttributedString{
+        let imageAttachment =  NSTextAttachment()
+        imageAttachment.image = UIImage(named: imgName)
+        imageAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
+        let attachmentString = NSAttributedString(attachment: imageAttachment)
+        let completeText = NSMutableAttributedString(string: "")
+        completeText.append(attachmentString)
+        let  textAfterIcon = NSMutableAttributedString(string: " \(text)")
+        completeText.append(textAfterIcon)
+        return completeText
     }
 }
