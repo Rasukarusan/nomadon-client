@@ -33,4 +33,16 @@ class Util {
         return 0
     }
     
+    /**
+     * フォント名を返す
+     *
+     * @return String
+     */
+    class func getFontName(isBold : Bool = false) -> String {
+        if isBold {
+            return "Ricty-Bold"
+        }
+        return "Ricty-Regular"
+    }
+    
 }

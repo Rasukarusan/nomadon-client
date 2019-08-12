@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */; };
 		171E680022FEAFBF00837B3A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E67FF22FEAFBF00837B3A /* edit.png */; };
+		1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */; };
+		1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */; };
 		17391B2A22FEC5120019329D /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B2922FEC5120019329D /* ClockView.swift */; };
+		17391B3022FEFBE60019329D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 17391B2F22FEFBE60019329D /* calendar.png */; };
+		17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3222FF00380019329D /* Ricty-Bold.ttf */; };
+		17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3122FF00380019329D /* Ricty-Regular.ttf */; };
+		17391B3622FF081C0019329D /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3522FF081C0019329D /* todo.png */; };
+		17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3722FF08730019329D /* TopViewController+UI.swift */; };
+		17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3A22FF16F50019329D /* TopViewModel.swift */; };
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
@@ -16,7 +25,7 @@
 		176E6C4722FA967100EB0598 /* CalculateCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4622FA967100EB0598 /* CalculateCalendarLogic.framework */; };
 		176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */; };
 		1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216022FA80FA00CA0B32 /* AppDelegate.swift */; };
-		1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216222FA80FA00CA0B32 /* ViewController.swift */; };
+		1791216322FA80FA00CA0B32 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791216222FA80FA00CA0B32 /* TopViewController.swift */; };
 		1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216422FA80FA00CA0B32 /* Main.storyboard */; };
 		1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1791216722FA80FC00CA0B32 /* Assets.xcassets */; };
 		1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */; };
@@ -45,7 +54,15 @@
 
 /* Begin PBXFileReference section */
 		171E67FF22FEAFBF00837B3A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFSCalendarDelegateProxy.swift; sourceTree = "<group>"; };
+		1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FSCalendar+Rx.swift"; sourceTree = "<group>"; };
 		17391B2922FEC5120019329D /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		17391B2F22FEFBE60019329D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		17391B3122FF00380019329D /* Ricty-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Regular.ttf"; sourceTree = "<group>"; };
+		17391B3222FF00380019329D /* Ricty-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Bold.ttf"; sourceTree = "<group>"; };
+		17391B3522FF081C0019329D /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
+		17391B3722FF08730019329D /* TopViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopViewController+UI.swift"; sourceTree = "<group>"; };
+		17391B3A22FF16F50019329D /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -55,7 +72,7 @@
 		176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		1791215D22FA80FA00CA0B32 /* nomadon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nomadon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1791216022FA80FA00CA0B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1791216222FA80FA00CA0B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1791216222FA80FA00CA0B32 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		1791216522FA80FA00CA0B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1791216722FA80FC00CA0B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1791216A22FA80FC00CA0B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */,
 				176E6C4722FA967100EB0598 /* CalculateCalendarLogic.framework in Frameworks */,
 				176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */,
 				176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */,
@@ -100,12 +118,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17391B2B22FEC5170019329D /* View */ = {
+		1735C01022FFC58A004B3655 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */,
+				1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17391B2B22FEC5170019329D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1791216222FA80FA00CA0B32 /* TopViewController.swift */,
+				17391B3722FF08730019329D /* TopViewController+UI.swift */,
 				17391B2922FEC5120019329D /* ClockView.swift */,
 			);
-			path = View;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17391B2C22FEFAE60019329D /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				17391B3522FF081C0019329D /* todo.png */,
+				17391B2F22FEFBE60019329D /* calendar.png */,
+				171E67FF22FEAFBF00837B3A /* edit.png */,
+				17391B3222FF00380019329D /* Ricty-Bold.ttf */,
+				17391B3122FF00380019329D /* Ricty-Regular.ttf */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		17391B3922FF16E30019329D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				17391B3A22FF16F50019329D /* TopViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		176E6C3922FA885B00EB0598 /* Frameworks */ = {
@@ -129,12 +178,12 @@
 			path = util;
 			sourceTree = "<group>";
 		};
-		176E6C4822FA997400EB0598 /* models */ = {
+		176E6C4822FA997400EB0598 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				176E6C4922FA9BFE00EB0598 /* CalendarModel.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1791215422FA80FA00CA0B32 = {
@@ -161,12 +210,13 @@
 		1791215F22FA80FA00CA0B32 /* nomadon */ = {
 			isa = PBXGroup;
 			children = (
-				171E67FF22FEAFBF00837B3A /* edit.png */,
 				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
-				1791216222FA80FA00CA0B32 /* ViewController.swift */,
-				17391B2B22FEC5170019329D /* View */,
-				176E6C4822FA997400EB0598 /* models */,
+				1735C01022FFC58A004B3655 /* Extensions */,
+				17391B2B22FEC5170019329D /* Views */,
+				17391B3922FF16E30019329D /* ViewModels */,
+				176E6C4822FA997400EB0598 /* Models */,
 				176E6C4322FA8FD900EB0598 /* util */,
+				17391B2C22FEFAE60019329D /* asset */,
 				1791216422FA80FA00CA0B32 /* Main.storyboard */,
 				1791216722FA80FC00CA0B32 /* Assets.xcassets */,
 				1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */,
@@ -300,8 +350,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */,
+				17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */,
+				17391B3622FF081C0019329D /* todo.png in Resources */,
 				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
 				171E680022FEAFBF00837B3A /* edit.png in Resources */,
+				17391B3022FEFBE60019329D /* calendar.png in Resources */,
 				17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */,
 				1791216822FA80FC00CA0B32 /* Assets.xcassets in Resources */,
 				1791216622FA80FA00CA0B32 /* Main.storyboard in Resources */,
@@ -337,6 +391,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CalculateCalendarLogic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -353,10 +408,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1791216322FA80FA00CA0B32 /* ViewController.swift in Sources */,
+				1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */,
+				1791216322FA80FA00CA0B32 /* TopViewController.swift in Sources */,
+				17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */,
 				17391B2A22FEC5120019329D /* ClockView.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
+				17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */,
 				17B406F122FADC3B0069B990 /* Localizable.swift in Sources */,
+				1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */,
 				176E6C4522FA8FF400EB0598 /* Util.swift in Sources */,
 				1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */,
 			);

@@ -32,5 +32,6 @@ enum Localizable {
 
     enum Calendar: String, LocalizableDelegate {
         case headerDateFormat
+        case titleDateFormat
     }
 }
