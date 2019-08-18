@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */; };
+		170B4C072308F6AD007ABB19 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B4C062308F6AD007ABB19 /* DetailEditView.swift */; };
+		170B4C09230912E5007ABB19 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 170B4C08230912E5007ABB19 /* hour.png */; };
 		171E680022FEAFBF00837B3A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E67FF22FEAFBF00837B3A /* edit.png */; };
 		1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */; };
 		1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */; };
@@ -31,8 +33,10 @@
 		1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1791216922FA80FC00CA0B32 /* LaunchScreen.storyboard */; };
 		1791217622FA80FC00CA0B32 /* nomadonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791217522FA80FC00CA0B32 /* nomadonTests.swift */; };
 		1791218122FA80FC00CA0B32 /* nomadonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791218022FA80FC00CA0B32 /* nomadonUITests.swift */; };
+		179C0B942301739800F9CFC8 /* HGCircularSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179C0B932301739800F9CFC8 /* HGCircularSlider.framework */; };
 		17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B406EE22FADB7F0069B990 /* Localizable.strings */; };
 		17B406F122FADC3B0069B990 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B406F022FADC3B0069B990 /* Localizable.swift */; };
+		17DE054923091AC000F04826 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +56,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		179C0BB52301804900F9CFC8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		170B4C062308F6AD007ABB19 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		170B4C08230912E5007ABB19 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		171E67FF22FEAFBF00837B3A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFSCalendarDelegateProxy.swift; sourceTree = "<group>"; };
 		1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FSCalendar+Rx.swift"; sourceTree = "<group>"; };
@@ -83,9 +102,12 @@
 		1791217C22FA80FC00CA0B32 /* nomadonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomadonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1791218022FA80FC00CA0B32 /* nomadonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomadonUITests.swift; sourceTree = "<group>"; };
 		1791218222FA80FC00CA0B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179C0B912301738A00F9CFC8 /* HGCircularSlider.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = HGCircularSlider.framework.dSYM; path = Carthage/Build/iOS/HGCircularSlider.framework.dSYM; sourceTree = "<group>"; };
+		179C0B932301739800F9CFC8 /* HGCircularSlider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HGCircularSlider.framework; path = Carthage/Build/iOS/HGCircularSlider.framework; sourceTree = "<group>"; };
 		17B406ED22FADB7F0069B990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17B406EF22FADBB30069B990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17B406F022FADC3B0069B990 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DE054923091AC000F04826 /* IQKeyboardManagerSwift.framework in Frameworks */,
+				179C0B942301739800F9CFC8 /* HGCircularSlider.framework in Frameworks */,
 				17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */,
 				176E6C4722FA967100EB0598 /* CalculateCalendarLogic.framework in Frameworks */,
 				176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */,
@@ -132,6 +156,7 @@
 			children = (
 				1791216222FA80FA00CA0B32 /* TopViewController.swift */,
 				17391B3722FF08730019329D /* TopViewController+UI.swift */,
+				170B4C062308F6AD007ABB19 /* DetailEditView.swift */,
 				17391B2922FEC5120019329D /* ClockView.swift */,
 			);
 			path = Views;
@@ -160,6 +185,9 @@
 		176E6C3922FA885B00EB0598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */,
+				179C0B932301739800F9CFC8 /* HGCircularSlider.framework */,
+				179C0B912301738A00F9CFC8 /* HGCircularSlider.framework.dSYM */,
 				176E6C4622FA967100EB0598 /* CalculateCalendarLogic.framework */,
 				176E6C4122FA8E0200EB0598 /* FSCalendar.framework */,
 				176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */,
@@ -211,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
+				170B4C08230912E5007ABB19 /* hour.png */,
 				1735C01022FFC58A004B3655 /* Extensions */,
 				17391B2B22FEC5170019329D /* Views */,
 				17391B3922FF16E30019329D /* ViewModels */,
@@ -255,6 +284,7 @@
 				1791215A22FA80FA00CA0B32 /* Frameworks */,
 				1791215B22FA80FA00CA0B32 /* Resources */,
 				176E6C3C22FA886F00EB0598 /* ShellScript */,
+				179C0BB52301804900F9CFC8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */,
+				170B4C09230912E5007ABB19 /* hour.png in Resources */,
 				17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */,
 				17391B3622FF081C0019329D /* todo.png in Resources */,
 				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
@@ -392,6 +423,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CalculateCalendarLogic.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HGCircularSlider.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -416,6 +449,7 @@
 				17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */,
 				17B406F122FADC3B0069B990 /* Localizable.swift in Sources */,
 				1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */,
+				170B4C072308F6AD007ABB19 /* DetailEditView.swift in Sources */,
 				176E6C4522FA8FF400EB0598 /* Util.swift in Sources */,
 				1791216122FA80FA00CA0B32 /* AppDelegate.swift in Sources */,
 			);

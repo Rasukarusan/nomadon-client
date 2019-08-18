@@ -48,6 +48,16 @@
                ReferencedContainer = "container:nomadon.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "179C0BA22301804900F9CFC8"
+               BuildableName = "PlaygroundTests.xctest"
+               BlueprintName = "PlaygroundTests"
+               ReferencedContainer = "container:nomadon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
