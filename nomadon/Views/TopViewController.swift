@@ -19,11 +19,18 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
     let detail = UILabel()
     let editBtn = UIButton()
     
+    
     private let viewModel =  TopViewModel()
     private let disposeBag = DisposeBag()
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let editView = DetailEditView(frame:self.view.frame)
+        editView.center = self.view.center
+        self.view.addSubview(editView)
+        
         editBtn.rx.tap.subscribe(onNext: { _ in
             print("next")
         }).disposed(by: disposeBag)
@@ -62,10 +69,14 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
         return viewModel.getHour(targetDate: date)
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         buildUI()
         viewModel.updateDetailView(Date())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
