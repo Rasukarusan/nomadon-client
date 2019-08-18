@@ -1,3 +1,5 @@
 github "ReactiveX/RxSwift" ~> 5.0
 github "WenchaoD/FSCalendar"
 github "fumiyasac/handMadeCalendarAdvance"
+github "HamzaGhazouani/HGCircularSlider"
+github "hackiftekhar/IQKeyboardManager"
