@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */; };
 		170B4C072308F6AD007ABB19 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B4C062308F6AD007ABB19 /* DetailEditView.swift */; };
-		170B4C09230912E5007ABB19 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 170B4C08230912E5007ABB19 /* hour.png */; };
 		171E680022FEAFBF00837B3A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E67FF22FEAFBF00837B3A /* edit.png */; };
 		1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */; };
 		1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */; };
@@ -20,6 +19,8 @@
 		17391B3622FF081C0019329D /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3522FF081C0019329D /* todo.png */; };
 		17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3722FF08730019329D /* TopViewController+UI.swift */; };
 		17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3A22FF16F50019329D /* TopViewModel.swift */; };
+		17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */; };
+		17425EF9230AD1A3005D5703 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 17425EF8230AD1A3005D5703 /* hour.png */; };
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
@@ -72,7 +73,6 @@
 
 /* Begin PBXFileReference section */
 		170B4C062308F6AD007ABB19 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
-		170B4C08230912E5007ABB19 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		171E67FF22FEAFBF00837B3A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFSCalendarDelegateProxy.swift; sourceTree = "<group>"; };
 		1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FSCalendar+Rx.swift"; sourceTree = "<group>"; };
@@ -83,6 +83,8 @@
 		17391B3522FF081C0019329D /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
 		17391B3722FF08730019329D /* TopViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopViewController+UI.swift"; sourceTree = "<group>"; };
 		17391B3A22FF16F50019329D /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewModel.swift; sourceTree = "<group>"; };
+		17425EF8230AD1A3005D5703 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		17391B2C22FEFAE60019329D /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				17425EF8230AD1A3005D5703 /* hour.png */,
 				17391B3522FF081C0019329D /* todo.png */,
 				17391B2F22FEFBE60019329D /* calendar.png */,
 				171E67FF22FEAFBF00837B3A /* edit.png */,
@@ -181,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				17391B3A22FF16F50019329D /* TopViewModel.swift */,
+				17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -242,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				1791216022FA80FA00CA0B32 /* AppDelegate.swift */,
-				170B4C08230912E5007ABB19 /* hour.png */,
 				1735C01022FFC58A004B3655 /* Extensions */,
 				17391B2B22FEC5170019329D /* Views */,
 				17391B3922FF16E30019329D /* ViewModels */,
@@ -384,7 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */,
-				170B4C09230912E5007ABB19 /* hour.png in Resources */,
+				17425EF9230AD1A3005D5703 /* hour.png in Resources */,
 				17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */,
 				17391B3622FF081C0019329D /* todo.png in Resources */,
 				1791216B22FA80FC00CA0B32 /* LaunchScreen.storyboard in Resources */,
@@ -450,6 +453,7 @@
 				17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */,
 				17391B2A22FEC5120019329D /* ClockView.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
+				17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */,
 				17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */,
 				17B406F122FADC3B0069B990 /* Localizable.swift in Sources */,
 				1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */,
