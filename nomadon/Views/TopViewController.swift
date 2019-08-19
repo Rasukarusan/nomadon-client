@@ -20,10 +20,11 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
     let editBtn = UIButton()
     
     private let viewModel =  TopViewModel()
+    private let detailEditViewModel = DetailEditViewModel()
     private let disposeBag = DisposeBag()
     
-    
     var editView:DetailEditView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +34,7 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
         
         editView.circularSlider.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { _ in
-            self.updateTexts(endPointValue: self.editView.circularSlider.endPointValue)
+            self.drawHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
         }).disposed(by: disposeBag)
         
         editView.doneBtn.rx.tap.subscribe(onNext: { _ in
@@ -49,31 +50,16 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
         }).disposed(by: disposeBag)
     }
     
-    func updateTexts(endPointValue:CGFloat) {
-        let decimal = endPointValue * 10
-        let hour = round(decimal/5) * 5 / 10
-        if hour > 12 && hour <= 24{ // 2周目以降の色を変える
-            self.editView.circularSlider.diskColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 0.5)
-            self.editView.circularSlider.trackColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 0.5)
-            self.editView.circularSlider.trackFillColor = UIColor(red: 0.6764, green: 0.447, blue: 0.7647, alpha: 1)
-            self.editView.circularSlider.endThumbStrokeColor = UIColor(red: 0.6764, green: 0.447, blue: 0.7647, alpha: 1)
-           self.editView.circularSlider.endThumbStrokeHighlightedColor = UIColor(red: 0.6764, green: 0.447, blue: 0.7647, alpha: 1)
-           self.editView.circularSlider.diskFillColor = UIColor(red: 0.6764, green: 0.447, blue: 0.7647, alpha: 0.5)
-        }else if hour == 12 {
-            self.editView.circularSlider.diskColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 0.5)
-            self.editView.circularSlider.trackColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.trackFillColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.endThumbStrokeColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.endThumbStrokeHighlightedColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.diskFillColor = .clear
-        } else if hour >= 0 && hour < 12 {
-            self.editView.circularSlider.diskColor = .clear
-            self.editView.circularSlider.trackColor = UIColor(red: 0.274, green: 0.288, blue: 0.297, alpha: 0.1)
-            self.editView.circularSlider.trackFillColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.endThumbStrokeColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.endThumbStrokeHighlightedColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
-            self.editView.circularSlider.diskFillColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 0.5)
-        }
+    private func drawHourCircle(endPointValue:CGFloat) {
+        let hourCircleColors = detailEditViewModel.getHourCircleColorsByHour(endPointValue: endPointValue)
+        self.editView.circularSlider.diskColor                      = hourCircleColors.disk
+        self.editView.circularSlider.diskFillColor                  = hourCircleColors.diskFill
+        self.editView.circularSlider.trackColor                     = hourCircleColors.track
+        self.editView.circularSlider.trackFillColor                 = hourCircleColors.trackFill
+        self.editView.circularSlider.endThumbStrokeColor            = hourCircleColors.endThumbStroke
+        self.editView.circularSlider.endThumbStrokeHighlightedColor = hourCircleColors.endThumbStrokeHighlighted
+
+        let hour = detailEditViewModel.getHour(endPointValue: endPointValue)
         self.editView.hourLbl.text = hour.description + "h"
     }
     
@@ -109,7 +95,7 @@ class TopViewController: UIViewController,FSCalendarDelegateAppearance, FSCalend
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        buildUI()
+//        buildUI()
         viewModel.updateDetailView(Date())
     }
     

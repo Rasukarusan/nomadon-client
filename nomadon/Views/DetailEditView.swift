@@ -59,7 +59,6 @@ class DetailEditView: UIView {
         dayDetailTitle.center.x = view.center.x
         dayDetailTitle.font = UIFont(name: fontRictyBold, size: 30)
         dayDetailTitle.textAlignment = .center
-//        dayDetailTitle.sizeToFit()
         view.addSubview(dayDetailTitle)
         
         // 時計の画像
@@ -71,21 +70,20 @@ class DetailEditView: UIView {
         clockImg.backgroundColor = .clear
         view.addSubview(clockImg)
         
-        let fillColor = UIColor(red: 0.1441, green: 0.3364, blue: 0.8777, alpha: 0.2)
         circularSlider.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY + 10, width: view.frame.width*0.7, height: view.frame.width*0.7)
         circularSlider.center.x = view.center.x
         circularSlider.minimumValue = 0.0
         circularSlider.maximumValue = 24.0
         circularSlider.numberOfRounds = 2
-        circularSlider.diskFillColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 0.5) // スライダーを動かした時に円が塗りつぶされる色
-        circularSlider.diskColor = .clear // 円の中の色
-        circularSlider.trackColor = UIColor(red: 0.274, green: 0.288, blue: 0.297, alpha: 0.1)
-        circularSlider.trackFillColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1)
+        circularSlider.diskFillColor = UIColor.HourCircle.diskFill
+        circularSlider.diskColor = UIColor.HourCircle.disk
+        circularSlider.trackColor = UIColor.HourCircle.track
+        circularSlider.trackFillColor = UIColor.HourCircle.trackFill
         circularSlider.backtrackLineWidth = 18.0
         circularSlider.lineWidth = 18.0 // スライダーで塗りつぶされる線の太さ
         circularSlider.thumbRadius = 6.0 // スライダーの半径
-        circularSlider.endThumbStrokeColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1) // スライダーが止まっている時の色
-        circularSlider.endThumbStrokeHighlightedColor = UIColor(red: 0.1512, green: 0.8393, blue: 0.9916, alpha: 1) // スライダーを動かしている時の色
+        circularSlider.endThumbStrokeColor = UIColor.HourCircle.endThumbStroke
+        circularSlider.endThumbStrokeHighlightedColor = UIColor.HourCircle.endThumbStrokeHighlighted
         circularSlider.backgroundColor = .clear
         circularSlider.endPointValue = 0.0
         view.addSubview(circularSlider)
@@ -95,7 +93,6 @@ class DetailEditView: UIView {
         // 時間
         hourLbl.frame = CGRect(
             x: 0, y: 0, width: view.frame.width/3, height: view.frame.height/15)
-//        hourLbl.backgroundColor = .ngreen
         hourLbl.center = circularSlider.center
         hourLbl.text = "4.5h"
         hourLbl.font = UIFont(name: fontRicty, size: 36)
