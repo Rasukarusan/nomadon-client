@@ -1,4 +1,5 @@
 github "HamzaGhazouani/HGCircularSlider" "2.2.0"
+github "MengTo/Spring" "1.0.5"
 github "ReactiveX/RxSwift" "5.0.1"
 github "WenchaoD/FSCalendar" "2.8.0"
 github "fumiyasac/handMadeCalendarAdvance" "0.3.0"
