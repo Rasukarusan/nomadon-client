@@ -21,6 +21,7 @@
 		17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3A22FF16F50019329D /* TopViewModel.swift */; };
 		17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */; };
 		17425EF9230AD1A3005D5703 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 17425EF8230AD1A3005D5703 /* hour.png */; };
+		17425EFB230AFB44005D5703 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17425EFA230AFB44005D5703 /* Spring.framework */; };
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
@@ -85,6 +86,7 @@
 		17391B3A22FF16F50019329D /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewModel.swift; sourceTree = "<group>"; };
 		17425EF8230AD1A3005D5703 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
+		17425EFA230AFB44005D5703 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = Carthage/Build/iOS/Spring.framework; sourceTree = "<group>"; };
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17425EFB230AFB44005D5703 /* Spring.framework in Frameworks */,
 				17DE054923091AC000F04826 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				179C0B942301739800F9CFC8 /* HGCircularSlider.framework in Frameworks */,
 				17054EB923015DA000BE0CFF /* RxCocoa.framework in Frameworks */,
@@ -192,6 +195,7 @@
 		176E6C3922FA885B00EB0598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17425EFA230AFB44005D5703 /* Spring.framework */,
 				17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */,
 				179C0B932301739800F9CFC8 /* HGCircularSlider.framework */,
 				179C0B912301738A00F9CFC8 /* HGCircularSlider.framework.dSYM */,
@@ -431,6 +435,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HGCircularSlider.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Spring.framework",
 			);
 			outputFileListPaths = (
 			);
