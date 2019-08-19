@@ -37,6 +37,7 @@
 		17B406EC22FADB7F0069B990 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B406EE22FADB7F0069B990 /* Localizable.strings */; };
 		17B406F122FADC3B0069B990 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B406F022FADC3B0069B990 /* Localizable.swift */; };
 		17DE054923091AC000F04826 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */; };
+		17DE054B2309517D00F04826 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE054A2309517D00F04826 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		17B406EF22FADBB30069B990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		17B406F022FADC3B0069B990 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		17DE054823091AC000F04826 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		17DE054A2309517D00F04826 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		1735C01022FFC58A004B3655 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				17DE054A2309517D00F04826 /* UIColor+Extension.swift */,
 				1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */,
 				1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */,
 			);
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DE054B2309517D00F04826 /* UIColor+Extension.swift in Sources */,
 				1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */,
 				1791216322FA80FA00CA0B32 /* TopViewController.swift in Sources */,
 				17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */,
