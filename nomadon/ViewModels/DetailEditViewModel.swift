@@ -15,7 +15,6 @@ struct HourCircleColors {
     var trackFill : UIColor
     var endThumbStroke : UIColor
     var endThumbStrokeHighlighted  : UIColor
-    
 }
 
 class DetailEditViewModel {
@@ -59,11 +58,4 @@ class DetailEditViewModel {
         let hour = round(decimal/5) * 5 / 10
         return hour
     }
-}
-
-// MARK - private method
-extension DetailEditViewModel {
-
-    
-
 }

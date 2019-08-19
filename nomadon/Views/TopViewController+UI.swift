@@ -164,16 +164,4 @@ extension TopViewController {
         editBtn.imageEdgeInsets = UIEdgeInsets(top: edge, left: edge, bottom: edge, right: edge);
         self.view.addSubview(editBtn)
     }
-    
-    func createLeftIconText(imgName: String, text: String) -> NSAttributedString{
-        let imageAttachment =  NSTextAttachment()
-        imageAttachment.image = UIImage(named: imgName)
-        imageAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
-        let attachmentString = NSAttributedString(attachment: imageAttachment)
-        let completeText = NSMutableAttributedString(string: "")
-        completeText.append(attachmentString)
-        let  textAfterIcon = NSMutableAttributedString(string: " \(text)")
-        completeText.append(textAfterIcon)
-        return completeText
-    }
 }
