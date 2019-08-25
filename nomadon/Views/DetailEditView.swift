@@ -8,8 +8,9 @@
 
 import UIKit
 import HGCircularSlider
+import Spring
 
-class DetailEditView: UIView {
+class DetailEditView: SpringView {
     
     public let dayDetailTitle = UILabel()
     public let circularSlider = CircularSlider()
@@ -63,14 +64,14 @@ class DetailEditView: UIView {
         
         // 時計の画像
         let clockImg = UIImageView()
-        clockImg.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY + 10, width: view.frame.width*0.7-50, height: view.frame.width*0.7-50)
+        clockImg.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY, width: view.frame.width*0.7-50, height: view.frame.width*0.7-50)
         clockImg.center.x = view.center.x
         
         clockImg.image = UIImage(named: "hour")
         clockImg.backgroundColor = .clear
         view.addSubview(clockImg)
         
-        circularSlider.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY + 10, width: view.frame.width*0.7, height: view.frame.width*0.7)
+        circularSlider.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY, width: view.frame.width*0.7, height: view.frame.width*0.7)
         circularSlider.center.x = view.center.x
         circularSlider.minimumValue = 0.0
         circularSlider.maximumValue = 24.0
