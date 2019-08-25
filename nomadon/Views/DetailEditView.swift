@@ -68,7 +68,12 @@ class DetailEditView: SpringView {
         clockImg.center.x = view.center.x
         
         clockImg.image = UIImage(named: "hour")
+        clockImg.layer.borderColor = UIColor.clear.cgColor
+        clockImg.layer.borderWidth = 0.5
+        clockImg.layer.cornerRadius = clockImg.frame.width/2
+        // TODO : テーマによって時計の画像を差し替える
         clockImg.backgroundColor = .clear
+        clockImg.layer.backgroundColor = UIColor.clear.cgColor
         view.addSubview(clockImg)
         
         circularSlider.frame = CGRect(x: 0, y: dayDetailTitle.frame.maxY, width: view.frame.width*0.7, height: view.frame.width*0.7)
