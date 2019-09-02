@@ -10,14 +10,20 @@ import UIKit
 
 enum ToolBarButton : Int {
     case home
+    case list
+    case chart
     case setting
     
     var centerX : CGFloat {
         switch self {
         case .home:
-            return UIScreen.main.bounds.size.width*0.15
+            return UIScreen.main.bounds.size.width*0.2
+        case .list:
+            return UIScreen.main.bounds.size.width*0.4
+        case .chart:
+            return UIScreen.main.bounds.size.width*0.6
         case .setting:
-            return UIScreen.main.bounds.size.width*0.85
+            return UIScreen.main.bounds.size.width*0.8
         }
     }
     
@@ -25,6 +31,10 @@ enum ToolBarButton : Int {
         switch self {
         case .home:
             return Localizable.Toolbar.buttonLabelHome.localized
+        case .list:
+            return Localizable.Toolbar.buttonLabelList.localized
+        case .chart:
+            return Localizable.Toolbar.buttonLabelChart.localized
         case .setting:
             return Localizable.Toolbar.buttonLabelSetting.localized
         }
@@ -38,6 +48,10 @@ enum ToolBarButton : Int {
         switch self {
         case .home:
             return isFilled ? "HomeFilled" : "Home"
+        case .list:
+            return isFilled ? "ListFilled" : "List"
+        case .chart:
+            return isFilled ? "ChartFilled" : "Chart"
         case .setting:
             return isFilled ? "SettingFilled" : "Setting"
         }
@@ -70,12 +84,18 @@ extension ToolBarProtocol where Self: UIViewController {
         
         // ToolBarButton
         let homeBtn = createToolBarButton(type: .home)
+        let listBtn = createToolBarButton(type: .list)
+        let chartBtn = createToolBarButton(type: .chart)
         let settingBtn = createToolBarButton(type: .setting)
         toolBar.addSubview(homeBtn)
+        toolBar.addSubview(listBtn)
+        toolBar.addSubview(chartBtn)
         toolBar.addSubview(settingBtn)
         
         // ToolBarButtonLabel
         toolBar.addSubview(createButtonLabel(targetBtn: homeBtn, type: .home))
+        toolBar.addSubview(createButtonLabel(targetBtn: listBtn, type: .list))
+        toolBar.addSubview(createButtonLabel(targetBtn: chartBtn, type: .chart))
         toolBar.addSubview(createButtonLabel(targetBtn: settingBtn, type: .setting))
         
         return toolBar
@@ -95,7 +115,7 @@ extension ToolBarProtocol where Self: UIViewController {
      */
     func changeColorSelected(toolBar: UIView, type: ToolBarButton) {
         let targetLbl:UILabel = toolBar.findLabels(text: type.label).first!
-        targetLbl.textColor = UIColor.hexStr("#3498db", alpha: 1.0)
+        targetLbl.textColor = .toolBarButtonLabel
     }
     
     /**

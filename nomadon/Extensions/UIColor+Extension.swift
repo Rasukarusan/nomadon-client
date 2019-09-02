@@ -27,6 +27,7 @@ extension UIColor {
     
     static let ngreen = UIColor(red: 0.1592, green: 0.7239, blue: 0.4518, alpha: 1)
     
+    static let toolBarButtonLabel = UIColor.hexStr("#2ECC71", alpha: 1.0)
     /**
      * disk : 円の中の色
      * track : 円の線の色

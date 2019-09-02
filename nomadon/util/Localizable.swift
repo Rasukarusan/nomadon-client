@@ -27,6 +27,8 @@ enum Localizable {
     
     enum Toolbar : String, LocalizableDelegate {
         case buttonLabelHome = "toolbarButtonLabelHome"
+        case buttonLabelList = "toolbarButtonLabelList"
+        case buttonLabelChart = "toolbarButtonLabelChart"
         case buttonLabelSetting = "toolbarButtonLabelSetting"
     }
 

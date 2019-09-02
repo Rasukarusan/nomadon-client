@@ -8,6 +8,8 @@
 
 // MARK: - ToolBar
 "toolbarButtonLabelHome" = "ホーム";
+"toolbarButtonLabelList" = "一覧";
+"toolbarButtonLabelChart" = "グラフ";
 "toolbarButtonLabelSetting" = "設定";
 
 // MARK: - Global
