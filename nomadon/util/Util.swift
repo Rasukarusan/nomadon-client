@@ -33,6 +33,10 @@ class Util {
         return 0
     }
     
+    class func getToolBarHeight() -> CGFloat {
+        return 50
+    }
+    
     /**
      * フォント名を返す
      *
