@@ -22,7 +22,7 @@ class DetailEditView: SpringView {
     private let clockImg = UIImageView()
     private let todoImgView = UIImageView()
     private let todoTitle = UILabel()
-    private let todoTextView = UITextView()
+    public let todoTextView = UITextView()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -85,7 +85,7 @@ class DetailEditView: SpringView {
         view.addSubview(circularSlider)
         
         // 時間テキスト
-        hourLbl.text = "4.5h"
+        hourLbl.text = "0.0h"
         hourLbl.font = UIFont(name: fontRicty, size: 36)
         hourLbl.textAlignment = .center
         view.addSubview(hourLbl)
@@ -96,7 +96,7 @@ class DetailEditView: SpringView {
         
         // 作業一覧タイトル
         todoTitle.textColor = .gray
-        todoTitle.text = "作業一覧"
+        todoTitle.text = Localizable.EditView.todoLabelTitle.localized
         todoTitle.font = UIFont(name: fontRicty, size: 18)
         view.addSubview(todoTitle)
         
@@ -107,7 +107,7 @@ class DetailEditView: SpringView {
         view.addSubview(todoTextView)
         
         // 完了ボタン
-        doneBtn.setTitle("完了", for: .normal)
+        doneBtn.setTitle(Localizable.EditView.doneBtnTitle.localized, for: .normal)
         doneBtn.titleLabel?.font = UIFont.init(name: fontRicty, size: 18)
         doneBtn.backgroundColor = .ngreen
         doneBtn.layer.cornerRadius = 5.0

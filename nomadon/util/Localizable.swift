@@ -41,4 +41,9 @@ enum Localizable {
         case headerDateFormat
         case titleDateFormat
     }
+    
+    enum EditView: String, LocalizableDelegate {
+        case todoLabelTitle
+        case doneBtnTitle
+    }
 }

@@ -22,7 +22,7 @@ class TopViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         topView = TopView(frame:self.view.frame)
         topView.calendar.delegate = self
         topView.calendar.dataSource = self
@@ -31,16 +31,18 @@ class TopViewController: BaseViewController {
         editView = DetailEditView(frame:self.view.frame)
         editView.isHidden = true
         self.view.addSubview(editView)
-        
+
         // 編集ボタンタップ時
         topView.editBtn.rx.tap.subscribe(onNext: { _ in
             self.showEditView()
+            let detail = self.detailEditViewModel.getDetail(self.topView.dayDetailTitle.text!)
+            self.redrawDetailEditView(detail)
         }).disposed(by: disposeBag)
         
         // 時計のスライダーを変更時
         editView.circularSlider.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { _ in
-            self.drawHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
+            self.redrawHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
         }).disposed(by: disposeBag)
         
         // Doneボタンタップ時
@@ -48,9 +50,9 @@ class TopViewController: BaseViewController {
             self.hideEditView()
         }).disposed(by: disposeBag)
         
-        // カレンダータップ時
+        // カレンダータップ後に呼ばれる処理
         topViewModel.calendarTapEvent.subscribe(onNext: { (detailView) in
-            self.updateDetailView(detailView)
+            self.redrawDetailView(detailView)
         }).disposed(by: disposeBag)
     }
     
@@ -76,7 +78,7 @@ class TopViewController: BaseViewController {
      * 編集画面の時計を描画し直す
      * @param CGFloat スライダーの値
      */
-    private func drawHourCircle(endPointValue:CGFloat) {
+    private func redrawHourCircle(endPointValue:CGFloat) {
         let hourCircleColors = detailEditViewModel.getHourCircleColorsByHour(endPointValue: endPointValue)
         self.editView.circularSlider.diskColor = hourCircleColors.disk
         self.editView.circularSlider.diskFillColor = hourCircleColors.diskFill
@@ -85,7 +87,7 @@ class TopViewController: BaseViewController {
         self.editView.circularSlider.endThumbStrokeColor = hourCircleColors.endThumbStroke
         self.editView.circularSlider.endThumbStrokeHighlightedColor = hourCircleColors.endThumbStrokeHighlighted
 
-        let hour = detailEditViewModel.getHour(endPointValue: endPointValue)
+        let hour = detailEditViewModel.calculateHour(endPointValue: endPointValue)
         self.editView.hourLbl.text = hour.description + "h"
     }
     
@@ -93,12 +95,24 @@ class TopViewController: BaseViewController {
      * 詳細画面を更新する
      * @param DetailView 更新後の詳細画面オブジェクト
      */
-    private func updateDetailView(_ detailView : DetailView) {
+    private func redrawDetailView(_ detailView : DetailView) {
         self.topView.dayDetailTitle.text = detailView.title
         self.topView.dayDetailHour.text = "\(detailView.hour)h"
         self.topView.circularSlider.endPointValue = CGFloat(Double(detailView.hour) ?? 0)
         self.topView.detailTextView.text = detailView.detail.joined(separator: "\n")
         self.topView.dayDetailTitle.sizeToFit()
+    }
+    
+    /**
+     * 詳細編集画面を更新する
+     * @param DetailView 更新後の詳細画面オブジェクト
+     */
+    private func redrawDetailEditView(_ detailView : DetailView) {
+        self.editView.dayDetailTitle.text = detailView.title
+        self.editView.hourLbl.text = "\(detailView.hour)h"
+        self.editView.circularSlider.endPointValue = CGFloat(Double(detailView.hour) ?? 0)
+        self.editView.todoTextView.text = detailView.detail.joined(separator: "\n")
+        self.editView.dayDetailTitle.sizeToFit()
     }
     
     override func viewDidLayoutSubviews() {

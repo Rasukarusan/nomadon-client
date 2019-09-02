@@ -30,6 +30,15 @@ class TopViewModel {
         calendarTapEventSubject.onNext(detailView)
     }
     
+    /**
+     * 詳細画面のタイトルを取得
+     * @return String
+     */
+    func getTitle(_ date: Date) -> String {
+        formatter.dateFormat = Localizable.Calendar.titleDateFormat.localized
+        return formatter.string(from: date)
+    }
+    
     func getHour(targetDate :Date) -> String {
         return Util.getHour()
     }
@@ -51,15 +60,6 @@ class TopViewModel {
             return .blue
         }
         return nil
-    }
-    
-    /**
-     * 詳細画面のタイトルを取得
-     * @return String
-     */
-    func getTitle(_ date: Date) -> String {
-        formatter.dateFormat = Localizable.Calendar.titleDateFormat.localized
-        return formatter.string(from: date)
     }
 }
 
