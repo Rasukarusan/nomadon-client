@@ -13,36 +13,34 @@ import RxCocoa
 import Spring
 
 class TopViewController: BaseViewController {
+    private var topView:TopView!
+    private var editView:DetailEditView!
     
-    let calendar =  FSCalendar()
-    var dayDetailTitle = UILabel()
-    let dayDetailHour = UILabel()
-    let detail = UILabel()
-    let editBtn = UIButton()
-    
-    private let viewModel =  TopViewModel()
+    private let topViewModel =  TopViewModel()
     private let detailEditViewModel = DetailEditViewModel()
     private let disposeBag = DisposeBag()
-    
-    var editView:DetailEditView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topView = TopView(frame:self.view.frame)
+        topView.calendar.delegate = self
+        topView.calendar.dataSource = self
+        self.view.addSubview(topView)
+        
         editView = DetailEditView(frame:self.view.frame)
-        editView.center = self.view.center
         self.editView.isHidden = true
         self.view.addSubview(editView)
+        
+        // 編集ボタンタップ時
+        topView.editBtn.rx.tap.subscribe(onNext: { _ in
+            self.showEditView()
+        }).disposed(by: disposeBag)
         
         // 時計のスライダーを変更時
         editView.circularSlider.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { _ in
             self.drawHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
-        }).disposed(by: disposeBag)
-
-        // 編集ボタンタップ時
-        editBtn.rx.tap.subscribe(onNext: { _ in
-            self.showEditView()
         }).disposed(by: disposeBag)
         
         // Doneボタンタップ時
@@ -51,7 +49,7 @@ class TopViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         // カレンダータップ時
-        viewModel.calendarTapEvent.subscribe(onNext: { (detailView) in
+        topViewModel.calendarTapEvent.subscribe(onNext: { (detailView) in
             self.updateDetailView(detailView)
         }).disposed(by: disposeBag)
     }
@@ -96,17 +94,15 @@ class TopViewController: BaseViewController {
      * @param DetailView 更新後の詳細画面オブジェクト
      */
     private func updateDetailView(_ detailView : DetailView) {
-        self.dayDetailTitle.text = detailView.title
-        self.dayDetailHour.text = detailView.hour
-        self.detail.text = detailView.detail.joined(separator: "\n")
-        self.dayDetailTitle.sizeToFit()
+        self.topView.dayDetailTitle.text = detailView.title
+        self.topView.dayDetailHour.text = detailView.hour
+        self.topView.detail.text = detailView.detail.joined(separator: "\n")
+        self.topView.dayDetailTitle.sizeToFit()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        buildUI()
-        viewModel.updateDetailView(Date())
-        self.view.bringSubviewToFront(self.editView)
+        topViewModel.updateDetailView(Date())
         
         // ToolBar
         let toolBar = buildToolBar()
@@ -126,7 +122,7 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
      * カレンダータップ時の処理
      */
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
-        viewModel.updateDetailView(date)
+        topViewModel.updateDetailView(date)
     }
     
     /**
@@ -134,7 +130,7 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
      * @return UIColor?
      */
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        return viewModel.getColorForDate(date)
+        return topViewModel.getColorForDate(date)
     }
     
     /**
@@ -142,6 +138,6 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
      * @return UIColor?
      */
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-        return viewModel.getHour(targetDate: date)
+        return topViewModel.getHour(targetDate: date)
     }
 }
