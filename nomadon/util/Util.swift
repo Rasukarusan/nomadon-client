@@ -50,4 +50,16 @@ class Util {
         return "Ricty-Regular"
     }
     
+    /**
+     * @Debug ランダムな時間文字列を返す
+     * @return String ex.) 3.5
+     */
+    class func getHour() -> String {
+        let isHalf = Bool.random()
+        let hour = String(Int.random(in: 1...24))
+        if isHalf && hour != "24"{
+            return "\(hour).5"
+        }
+        return "\(hour).0"
+    }
 }
