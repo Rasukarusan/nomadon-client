@@ -10,6 +10,8 @@ import UIKit
 
 enum StoryBoard :String {
     case home = "HomeView"
+    case list = "ListView"
+    case chart = "ChartView"
     case setting = "SettingView"
 }
 
@@ -23,6 +25,10 @@ extension TransitionProtocol where Self: UIViewController {
         case 0:
             goHomeView()
         case 1:
+            goListView()
+        case 2:
+            goChartView()
+        case 3:
             goSettingView()
         default:
             return
@@ -32,6 +38,16 @@ extension TransitionProtocol where Self: UIViewController {
     func goHomeView() {
         let homeView = self.storyboard?.instantiateViewController(withIdentifier: StoryBoard.home.rawValue) as! TopViewController
         self.present(homeView, animated:false, completion:nil)
+    }
+    
+    func goListView() {
+        let listView = self.storyboard?.instantiateViewController(withIdentifier: StoryBoard.list.rawValue) as! ListViewController
+        self.present(listView, animated:false, completion:nil)
+    }
+    
+    func goChartView() {
+        let chartView = self.storyboard?.instantiateViewController(withIdentifier: StoryBoard.chart.rawValue) as! ChartViewController
+        self.present(chartView, animated:false, completion:nil)
     }
     
     func goSettingView() {
