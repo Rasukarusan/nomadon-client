@@ -17,7 +17,7 @@ class DetailEditView: SpringView {
     public let hourLbl = UILabel()
     public let doneBtn = UIButton()
     
-    let paddingLeft : CGFloat = 20.0
+    private let paddingLeft : CGFloat = 20.0
     private let view = UIView()
     private let clockImg = UIImageView()
     private let todoImgView = UIImageView()
@@ -35,6 +35,7 @@ class DetailEditView: SpringView {
         layoutClock()
         layoutTodo()
         layoutDoneBtn()
+        
     }
     
     override init(frame: CGRect) {
@@ -198,5 +199,4 @@ class DetailEditView: SpringView {
         )
         doneBtn.center = CGPoint(x: view.frame.width/2, y:view.frame.height*0.95)
     }
-    
 }
