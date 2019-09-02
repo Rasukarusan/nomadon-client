@@ -17,7 +17,6 @@
 		17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3222FF00380019329D /* Ricty-Bold.ttf */; };
 		17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3122FF00380019329D /* Ricty-Regular.ttf */; };
 		17391B3622FF081C0019329D /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3522FF081C0019329D /* todo.png */; };
-		17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3722FF08730019329D /* TopViewController+UI.swift */; };
 		17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B3A22FF16F50019329D /* TopViewModel.swift */; };
 		17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */; };
 		17425EF9230AD1A3005D5703 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 17425EF8230AD1A3005D5703 /* hour.png */; };
@@ -28,6 +27,7 @@
 		17699A03231D002B0074F414 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 17699A01231D002B0074F414 /* List.png */; };
 		17699A06231D016A0074F414 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17699A05231D016A0074F414 /* ChartViewController.swift */; };
 		17699A08231D01750074F414 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17699A07231D01750074F414 /* ListViewController.swift */; };
+		17699A0E231D1F150074F414 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17699A0D231D1F150074F414 /* TopView.swift */; };
 		176E6C3B22FA885B00EB0598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3A22FA885B00EB0598 /* RxSwift.framework */; };
 		176E6C4022FA8AED00EB0598 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */; };
 		176E6C4222FA8E0300EB0598 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E6C4122FA8E0200EB0598 /* FSCalendar.framework */; };
@@ -98,7 +98,6 @@
 		17391B3122FF00380019329D /* Ricty-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Regular.ttf"; sourceTree = "<group>"; };
 		17391B3222FF00380019329D /* Ricty-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Bold.ttf"; sourceTree = "<group>"; };
 		17391B3522FF081C0019329D /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
-		17391B3722FF08730019329D /* TopViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopViewController+UI.swift"; sourceTree = "<group>"; };
 		17391B3A22FF16F50019329D /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewModel.swift; sourceTree = "<group>"; };
 		17425EF8230AD1A3005D5703 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		17699A01231D002B0074F414 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
 		17699A05231D016A0074F414 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		17699A07231D01750074F414 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		17699A0D231D1F150074F414 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		176E6C3A22FA885B00EB0598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		176E6C3D22FA8A1100EB0598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		176E6C3F22FA8AEC00EB0598 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				1791216222FA80FA00CA0B32 /* TopViewController.swift */,
-				17391B3722FF08730019329D /* TopViewController+UI.swift */,
+				17699A0D231D1F150074F414 /* TopView.swift */,
 				170B4C062308F6AD007ABB19 /* DetailEditView.swift */,
 				17391B2922FEC5120019329D /* ClockView.swift */,
 			);
@@ -529,9 +529,9 @@
 				17DE054B2309517D00F04826 /* UIColor+Extension.swift in Sources */,
 				1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */,
 				1791216322FA80FA00CA0B32 /* TopViewController.swift in Sources */,
-				17391B3822FF08730019329D /* TopViewController+UI.swift in Sources */,
 				17699A06231D016A0074F414 /* ChartViewController.swift in Sources */,
 				1770552E231295E1004B435C /* SettingViewController.swift in Sources */,
+				17699A0E231D1F150074F414 /* TopView.swift in Sources */,
 				17391B2A22FEC5120019329D /* ClockView.swift in Sources */,
 				1770552323128ABE004B435C /* BaseViewController.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
