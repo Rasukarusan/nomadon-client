@@ -29,7 +29,6 @@ class Util {
     class func getSafeAreaBottom() -> CGFloat {
         if #available(iOS 11.0, *) {
             return UIApplication.shared.keyWindow?.rootViewController?.view.safeAreaInsets.bottom ?? 0
-            
         }
         return 0
     }

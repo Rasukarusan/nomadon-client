@@ -29,7 +29,7 @@ class TopViewController: BaseViewController {
         self.view.addSubview(topView)
         
         editView = DetailEditView(frame:self.view.frame)
-        self.editView.isHidden = true
+        editView.isHidden = true
         self.view.addSubview(editView)
         
         // 編集ボタンタップ時
@@ -95,8 +95,9 @@ class TopViewController: BaseViewController {
      */
     private func updateDetailView(_ detailView : DetailView) {
         self.topView.dayDetailTitle.text = detailView.title
-        self.topView.dayDetailHour.text = detailView.hour
-        self.topView.detail.text = detailView.detail.joined(separator: "\n")
+        self.topView.dayDetailHour.text = "\(detailView.hour)h"
+        self.topView.circularSlider.endPointValue = CGFloat(Double(detailView.hour) ?? 0)
+        self.topView.detailTextView.text = detailView.detail.joined(separator: "\n")
         self.topView.dayDetailTitle.sizeToFit()
     }
     

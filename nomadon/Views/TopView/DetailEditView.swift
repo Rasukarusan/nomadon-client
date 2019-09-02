@@ -141,8 +141,8 @@ class DetailEditView: SpringView {
         clockImg.frame = CGRect(
             x: 0,
             y: dayDetailTitle.frame.maxY,
-            width: view.frame.width*0.7-50,
-            height: view.frame.width*0.7-50
+            width: view.frame.width*0.7 - 50,
+            height: view.frame.width*0.7 - 50
         )
         clockImg.center.x = view.center.x
         clockImg.layer.cornerRadius = clockImg.frame.width/2
