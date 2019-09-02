@@ -20,6 +20,7 @@
 		17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */; };
 		17425EF9230AD1A3005D5703 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 17425EF8230AD1A3005D5703 /* hour.png */; };
 		17425EFB230AFB44005D5703 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17425EFA230AFB44005D5703 /* Spring.framework */; };
+		1745A923231DC48600DD6A54 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745A922231DC48600DD6A54 /* String+Extension.swift */; };
 		176999FE231CFF9B0074F414 /* Chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 176999FC231CFF9A0074F414 /* Chart.png */; };
 		176999FF231CFF9B0074F414 /* ChartFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = 176999FD231CFF9B0074F414 /* ChartFilled.png */; };
 		17699A02231D002B0074F414 /* ListFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = 17699A00231D002B0074F414 /* ListFilled.png */; };
@@ -100,6 +101,7 @@
 		17425EF6230ACE90005D5703 /* DetailEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewModel.swift; sourceTree = "<group>"; };
 		17425EF8230AD1A3005D5703 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		17425EFA230AFB44005D5703 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = Carthage/Build/iOS/Spring.framework; sourceTree = "<group>"; };
+		1745A922231DC48600DD6A54 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		176999FC231CFF9A0074F414 /* Chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chart.png; sourceTree = "<group>"; };
 		176999FD231CFF9B0074F414 /* ChartFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChartFilled.png; sourceTree = "<group>"; };
 		17699A00231D002B0074F414 /* ListFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ListFilled.png; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				1770552B23128CDC004B435C /* UIView+Extension.swift */,
 				1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */,
 				1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */,
+				1745A922231DC48600DD6A54 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				1770552E231295E1004B435C /* SettingViewController.swift in Sources */,
 				17699A0E231D1F150074F414 /* TopView.swift in Sources */,
 				1770552323128ABE004B435C /* BaseViewController.swift in Sources */,
+				1745A923231DC48600DD6A54 /* String+Extension.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
 				17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */,
 				17391B3B22FF16F50019329D /* TopViewModel.swift in Sources */,
