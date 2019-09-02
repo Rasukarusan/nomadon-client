@@ -20,3 +20,7 @@
 // MARK: - Calendar
 "headerDateFormat" = "YYYY年MM月";
 "titleDateFormat"  = "YYYY年MM月dd日";
+
+// MARK: - EditView
+"todoLabelTitle" = "作業一覧";
+"doneBtnTitle" = "完了";
