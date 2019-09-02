@@ -35,7 +35,6 @@ class DetailEditView: SpringView {
         layoutClock()
         layoutTodo()
         layoutDoneBtn()
-        
     }
     
     override init(frame: CGRect) {
