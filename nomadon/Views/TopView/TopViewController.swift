@@ -42,7 +42,7 @@ class TopViewController: BaseViewController {
         // 時計のスライダーを変更時
         editView.circularSlider.rx.controlEvent(.valueChanged)
         .subscribe(onNext: { _ in
-            self.redrawHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
+            self.redrawEditViewHourCircle(endPointValue: self.editView.circularSlider.endPointValue)
         }).disposed(by: disposeBag)
         
         // Doneボタンタップ時
@@ -78,7 +78,7 @@ class TopViewController: BaseViewController {
      * 編集画面の時計を描画し直す
      * @param CGFloat スライダーの値
      */
-    private func redrawHourCircle(endPointValue:CGFloat) {
+    private func redrawEditViewHourCircle(endPointValue:CGFloat) {
         let hourCircleColors = detailEditViewModel.getHourCircleColorsByHour(endPointValue: endPointValue)
         self.editView.circularSlider.diskColor = hourCircleColors.disk
         self.editView.circularSlider.diskFillColor = hourCircleColors.diskFill
