@@ -6,6 +6,10 @@
   Copyright © 2019 tanaka.naoto. All rights reserved.
 */
 
+// MARK: - ToolBar
+"toolbarButtonLabelHome" = "ホーム";
+"toolbarButtonLabelSetting" = "設定";
+
 // MARK: - Global
 "ok" = "OK";
 "cancel" = "キャンセル";

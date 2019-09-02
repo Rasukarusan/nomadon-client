@@ -9,6 +9,22 @@
 import UIKit
 
 extension UIColor {
+    class func hexStr (_ hexStr : NSString, alpha : CGFloat) -> UIColor {
+        var hexStr = hexStr
+        hexStr = hexStr.replacingOccurrences(of: "#", with: "") as NSString
+        let scanner = Scanner(string: hexStr as String)
+        var color: UInt32 = 0
+        if scanner.scanHexInt32(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            return UIColor(red:r,green:g,blue:b,alpha:alpha)
+        } else {
+            
+            return UIColor.white;
+        }
+    }
+    
     static let ngreen = UIColor(red: 0.1592, green: 0.7239, blue: 0.4518, alpha: 1)
     
     /**

@@ -24,6 +24,11 @@ extension LocalizableDelegate {
 }
 
 enum Localizable {
+    
+    enum Toolbar : String, LocalizableDelegate {
+        case buttonLabelHome = "toolbarButtonLabelHome"
+        case buttonLabelSetting = "toolbarButtonLabelSetting"
+    }
 
     enum Global: String, LocalizableDelegate {
         case ok, cancel, close

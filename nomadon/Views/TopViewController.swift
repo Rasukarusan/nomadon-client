@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import Spring
 
-class TopViewController: UIViewController {
+class TopViewController: BaseViewController {
     
     let calendar =  FSCalendar()
     var dayDetailTitle = UILabel()
@@ -107,6 +107,12 @@ class TopViewController: UIViewController {
         buildUI()
         viewModel.updateDetailView(Date())
         self.view.bringSubviewToFront(self.editView)
+        
+        // ToolBar
+        let toolBar = buildToolBar()
+        changeImageSelected(toolBar: toolBar, type: .home)
+        changeColorSelected(toolBar: toolBar, type: .home)
+        self.view.addSubview(toolBar)
     }
     
     override func viewDidAppear(_ animated: Bool) {
