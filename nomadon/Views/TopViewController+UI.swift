@@ -20,12 +20,12 @@ extension TopViewController {
             x: 0,
             y: self.view.frame.height/2 - Util.getSafeAreaBottom(),
             width: self.view.frame.width,
-            height: self.view.frame.height/2 - Util.getSafeAreaBottom()
+            height: self.view.frame.height/2 - Util.getSafeAreaBottom() - Util.getToolBarHeight()
         )
         calendar.dataSource = self
         calendar.delegate = self
         calendar.setScope(.week, animated: true)
-        calendar.appearance.subtitleOffset = CGPoint(x: 0, y: 10)
+        calendar.appearance.subtitleOffset = CGPoint(x: 0, y: 0)
         calendar.appearance.borderRadius = 10
         calendar.appearance.headerTitleFont = UIFont(name: fontRicty,size: 18)
         calendar.appearance.weekdayFont = UIFont(name: fontRicty, size: 18)

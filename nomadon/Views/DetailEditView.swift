@@ -27,31 +27,24 @@ class DetailEditView: SpringView {
         let fontRicty = Util.getFontName()
         let fontRictyBold = Util.getFontName(isBold: true)
         
-        let view = UIView(frame:CGRect(x: 0, y: 0, width: frame.width*0.95, height: frame.height*0.95 - Util.getStatusBarHeight() - Util.getSafeAreaBottom()))
+        let view = UIView(frame:CGRect(
+            x: 0,
+            y: 0,
+            width: frame.width*0.95,
+            height: frame.height*0.95 - Util.getStatusBarHeight() - Util.getSafeAreaBottom() - Util.getToolBarHeight()
+        ))
         view.backgroundColor = .white
         view.center = center
+        view.center.y = center.y -  Util.getToolBarHeight()/2
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.borderWidth = 0.5
         view.layer.cornerRadius = 10.0
         addSubview(view)
         
-        // タイトル左のアイコン
-        let iconImgView = UIImageView()
-        iconImgView.frame = CGRect(
-            x:paddingLeft,
-            y:frame.height/30,
-            width:20,
-            height:20
-        )
-        iconImgView.image = UIImage(named:"edit")
-        iconImgView.center.x = view.center.x
-        view.addSubview(iconImgView)
-        
         // タイトル
         dayDetailTitle.frame = CGRect(
-            x: 0,//iconImgView.frame.maxX + paddingLeft,
-//            y: frame.height*0.8,
-            y: frame.height/30,
+            x: 0,
+            y: frame.height/70,
             width: frame.width - paddingLeft*2,
             height: frame.height/10
         )
@@ -136,7 +129,7 @@ class DetailEditView: SpringView {
             x: paddingLeft,
             y: todoTitle.frame.maxY + 10,
             width: view.frame.width*0.95 - paddingLeft,
-            height: view.frame.height*0.4 - Util.getSafeAreaBottom() - Util.getStatusBarHeight()
+            height: view.frame.height - todoTitle.frame.maxY - Util.getSafeAreaBottom() - Util.getStatusBarHeight() - Util.getToolBarHeight()
         )
         todoTextView.layer.cornerRadius = 10.0
         todoTextView.layer.borderWidth = 1.0
@@ -144,8 +137,8 @@ class DetailEditView: SpringView {
         view.addSubview(todoTextView)
         
         // 完了ボタン
-        doneBtn.frame = CGRect(x: 0, y: 0, width: view.frame.width*0.3, height: view.frame.height*0.05)
-        doneBtn.center = CGPoint(x: view.frame.width/2, y: view.frame.height*0.95)
+        doneBtn.frame = CGRect(x: 0, y: todoTextView.frame.maxY + 5, width: view.frame.width*0.3, height: view.frame.height*0.05)
+        doneBtn.center = CGPoint(x: view.frame.width/2, y:view.frame.height*0.95)
         doneBtn.setTitle("完了", for: .normal)
         doneBtn.titleLabel?.font = UIFont.init(name: fontRicty, size: 18)
         doneBtn.backgroundColor = .ngreen
