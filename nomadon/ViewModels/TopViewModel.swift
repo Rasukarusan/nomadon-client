@@ -31,11 +31,11 @@ class TopViewModel {
     }
     
     func getHour(targetDate :Date) -> String {
-        return "4.5h"
+        return Util.getHour()
     }
     
     func getDetail(targetDate :Date) -> [String] {
-        return ["・おっぱい", "・OMMC"]
+        return ["・国語勉強\n・理科勉強\n・Swift勉強\n・Go勉強\n・読書","・ひたすら勉強か"]
     }
     
     /**

@@ -12,7 +12,6 @@
 		171E680022FEAFBF00837B3A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 171E67FF22FEAFBF00837B3A /* edit.png */; };
 		1735C01222FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */; };
 		1735C01422FFDBCB004B3655 /* FSCalendar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */; };
-		17391B2A22FEC5120019329D /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17391B2922FEC5120019329D /* ClockView.swift */; };
 		17391B3022FEFBE60019329D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 17391B2F22FEFBE60019329D /* calendar.png */; };
 		17391B3322FF00540019329D /* Ricty-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3222FF00380019329D /* Ricty-Bold.ttf */; };
 		17391B3422FF00540019329D /* Ricty-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17391B3122FF00380019329D /* Ricty-Regular.ttf */; };
@@ -93,7 +92,6 @@
 		171E67FF22FEAFBF00837B3A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		1735C01122FFC5CE004B3655 /* RxFSCalendarDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFSCalendarDelegateProxy.swift; sourceTree = "<group>"; };
 		1735C01322FFDBCB004B3655 /* FSCalendar+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FSCalendar+Rx.swift"; sourceTree = "<group>"; };
-		17391B2922FEC5120019329D /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		17391B2F22FEFBE60019329D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		17391B3122FF00380019329D /* Ricty-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Regular.ttf"; sourceTree = "<group>"; };
 		17391B3222FF00380019329D /* Ricty-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ricty-Bold.ttf"; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 				1791216222FA80FA00CA0B32 /* TopViewController.swift */,
 				17699A0D231D1F150074F414 /* TopView.swift */,
 				170B4C062308F6AD007ABB19 /* DetailEditView.swift */,
-				17391B2922FEC5120019329D /* ClockView.swift */,
 			);
 			path = TopView;
 			sourceTree = "<group>";
@@ -532,7 +529,6 @@
 				17699A06231D016A0074F414 /* ChartViewController.swift in Sources */,
 				1770552E231295E1004B435C /* SettingViewController.swift in Sources */,
 				17699A0E231D1F150074F414 /* TopView.swift in Sources */,
-				17391B2A22FEC5120019329D /* ClockView.swift in Sources */,
 				1770552323128ABE004B435C /* BaseViewController.swift in Sources */,
 				176E6C4A22FA9BFE00EB0598 /* CalendarModel.swift in Sources */,
 				17425EF7230ACE90005D5703 /* DetailEditViewModel.swift in Sources */,

@@ -8,21 +8,21 @@
 
 import UIKit
 import FSCalendar
+import HGCircularSlider
 
 class TopView: UIView {
     public let calendar =  FSCalendar()
     public let dayDetailView = UIView()
-    public var dayDetailTitle = UILabel()
+    public let circularSlider = CircularSlider()
+    public let dayDetailTitle = UILabel()
     public let dayDetailHour = UILabel()
-    public let detail = UILabel()
+    public let detailTextView = UITextView()
     public let editBtn = UIButton()
     
     private let paddingLeft : CGFloat = 10.0
     private let iconTitleImgView = UIImageView()
-    private let clockView = UIView()
-    private let clock = ClockView()
-    private let detailScrollView = UIScrollView()
-    
+    private let clockImg = UIImageView()
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -33,7 +33,7 @@ class TopView: UIView {
         layoutDetailView()
         layoutDetailTitle()
         layoutClock()
-        layoutDetail()
+        layoutDetailText()
         layoutEditBtn()
     }
 
@@ -70,34 +70,43 @@ class TopView: UIView {
         dayDetailTitle.font = UIFont(name: fontRictyBold, size: 18)
         dayDetailView.addSubview(dayDetailTitle)
         
-        // 時計を表示するView
-        // ClockView()をそのままcenter.xなどで移動すると、円だけが移動してしまうため
-        // ClockView()を載せるためのViewを作り、それを移動させる手段を取った
-        clockView.backgroundColor = .clear
-        dayDetailView.addSubview(clockView)
+        // 時計の画像
+        clockImg.image = UIImage(named: "hour")
+        clockImg.layer.borderColor = UIColor.clear.cgColor
+        clockImg.layer.borderWidth = 0.5
+        // TODO : テーマによって時計の画像を差し替える
+        clockImg.backgroundColor = .clear
+        clockImg.layer.backgroundColor = UIColor.clear.cgColor
+        dayDetailView.addSubview(clockImg)
         
-        // 時計
-        clock.endAngle = 30
-        clockView.addSubview(clock)
+        // スライダー
+        circularSlider.minimumValue = 0.0
+        circularSlider.maximumValue = 24.0
+        circularSlider.numberOfRounds = 2
+        circularSlider.diskFillColor = UIColor.HourCircle.diskFill
+        circularSlider.diskColor = UIColor.HourCircle.disk
+        circularSlider.trackColor = UIColor.HourCircle.track
+        circularSlider.trackFillColor = UIColor.HourCircle.trackFill
+        circularSlider.backtrackLineWidth = 9.0
+        circularSlider.lineWidth = 9.0 // スライダーで塗りつぶされる線の太さ
+        circularSlider.thumbRadius = 0.0 // スライダーの半径
+        circularSlider.endThumbStrokeColor = UIColor.HourCircle.endThumbStroke
+        circularSlider.endThumbStrokeHighlightedColor = UIColor.HourCircle.endThumbStrokeHighlighted
+        circularSlider.backgroundColor = .clear
+        circularSlider.endPointValue = 4.5
+        circularSlider.isEnabled = false
+        dayDetailView.addSubview(circularSlider)
         
-        // 作業時間
-        dayDetailHour.backgroundColor = .clear
-        dayDetailHour.textColor = .black
-        dayDetailHour.text = "5.5h"
+        // 時間テキスト
+        dayDetailHour.text = "4.5h"
+        dayDetailHour.font = UIFont(name: fontRicty, size: 18)
         dayDetailHour.textAlignment = .center
-        dayDetailHour.font = UIFont(name: fontRicty, size: frame.height/30)
         dayDetailView.addSubview(dayDetailHour)
         
         // 詳細
-        detailScrollView.showsVerticalScrollIndicator = false
-        dayDetailView.addSubview(detailScrollView)
-        
-        // 詳細の1つ(TODO: 1つのLabelに載せるか、複数のLabelに1つずつ載せるか未定。今は1つのLabelに全載せ)
-        detail.textColor = .black
-        detail.text = "・個人アプリ開発\n・カレンダー機能の実装\n・Golangでサーバー作り"
-        detail.font = UIFont(name: fontRicty, size:18)
-        detail.numberOfLines = 0
-        detailScrollView.addSubview(detail)
+        detailTextView.textColor = .black
+        detailTextView.font = UIFont(name: fontRicty, size:18)
+        dayDetailView.addSubview(detailTextView)
         
         // 編集ボタン
         editBtn.backgroundColor = .white
@@ -147,50 +156,43 @@ class TopView: UIView {
     }
     
     private func layoutClock() {
-        // 時計を載せるView
-        clockView.frame = CGRect(
+        clockImg.frame = CGRect(
             x: 0,
             y: dayDetailTitle.frame.maxY,
-            width: dayDetailView.frame.width/4,
-            height: dayDetailView.frame.height/4
+            width: dayDetailView.frame.width*0.5-50,
+            height: dayDetailView.frame.width*0.5-50
         )
-        clockView.center.x = dayDetailView.center.x - paddingLeft
-        // 時計
-        clock.frame = CGRect(
+        clockImg.center.x = dayDetailView.center.x
+        clockImg.layer.cornerRadius = clockImg.frame.width/2
+        
+        circularSlider.frame = CGRect(
             x: 0,
-            y: 0,
-            width: dayDetailView.frame.width/4,
-            height: dayDetailView.frame.height/4
+            y: dayDetailTitle.frame.maxY,
+            width: dayDetailView.frame.width*0.4,
+            height: dayDetailView.frame.width*0.4
         )
-        clock.radius = clock.frame.width/3
-        // 時計の時間テキスト
+        circularSlider.center.x = dayDetailView.center.x
+        // 時計画像とスライダーの位置を合わせるため両方の位置を定義に設定する
+        clockImg.center.y = circularSlider.center.y
+        
         dayDetailHour.frame = CGRect(
             x: 0,
-            y: dayDetailTitle.frame.maxY,
-            width: dayDetailView.frame.width/4,
-            height: dayDetailView.frame.height/4
+            y: 0,
+            width: dayDetailView.frame.width/3,
+            height: dayDetailView.frame.height/15
         )
-        dayDetailHour.center.x = dayDetailView.center.x - paddingLeft
+        dayDetailHour.center = circularSlider.center
     }
     
-    private func layoutDetail() {
-        // 詳細ラベルを載せるスクロールView
-        detailScrollView.frame = CGRect(
-            x: paddingLeft,
-            y: dayDetailHour.frame.maxY + dayDetailView.frame.height/20,
-            width: dayDetailView.frame.width - paddingLeft*2,
-            height: dayDetailView.frame.height - dayDetailHour.frame.maxY
-        )
-        detailScrollView.contentSize = CGSize(width: detailScrollView.frame.width, height:dayDetailView.frame.height*3)
-        
-        // 詳細ラベル
-        detail.frame = CGRect(
+
+    private func layoutDetailText() {
+        detailTextView.frame = CGRect(
             x: 0,
-            y: 0,
-            width: detailScrollView.frame.width,
-            height: detailScrollView.frame.height/5
+            y: circularSlider.frame.maxY,
+            width: dayDetailView.frame.width,
+            height: dayDetailView.frame.height/5
         )
-        detail.sizeToFit()
+        detailTextView.sizeToFit()
     }
     
     private func layoutEditBtn() {
