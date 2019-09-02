@@ -25,7 +25,7 @@ class DetailEditViewModel {
      */
     func getHourCircleColorsByHour(endPointValue:CGFloat) -> HourCircleColors {
         let hour = self.getHour(endPointValue: endPointValue)
-        // デフォルト
+        // デフォルト(1周目)
         var hourCircleColors = HourCircleColors(
             disk: UIColor.HourCircle.disk,
             diskFill: UIColor.HourCircle.diskFill,

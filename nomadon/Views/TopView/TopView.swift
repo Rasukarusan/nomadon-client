@@ -10,10 +10,6 @@ import UIKit
 import FSCalendar
 
 class TopView: UIView {
-    let fontRicty = Util.getFontName()
-    let fontRictyBold = Util.getFontName(isBold: true)
-    let paddingLeft : CGFloat = 10.0
-    
     public let calendar =  FSCalendar()
     public let dayDetailView = UIView()
     public var dayDetailTitle = UILabel()
@@ -21,6 +17,7 @@ class TopView: UIView {
     public let detail = UILabel()
     public let editBtn = UIButton()
     
+    private let paddingLeft : CGFloat = 10.0
     private let iconTitleImgView = UIImageView()
     private let clockView = UIView()
     private let clock = ClockView()
@@ -42,6 +39,8 @@ class TopView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        let fontRicty = Util.getFontName()
+        let fontRictyBold = Util.getFontName(isBold: true)
         // カレンダー
         calendar.setScope(.week, animated: true)
         calendar.appearance.subtitleOffset = CGPoint(x: 0, y: 0)
