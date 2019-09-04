@@ -15,6 +15,7 @@ class DetailEditView: SpringView {
     public let dayDetailTitle = UILabel()
     public let circularSlider = CircularSlider()
     public let hourLbl = UILabel()
+    public let todoTextView = UITextView()
     public let doneBtn = UIButton()
     
     private let paddingLeft : CGFloat = 20.0
@@ -22,12 +23,11 @@ class DetailEditView: SpringView {
     private let clockImg = UIImageView()
     private let todoImgView = UIImageView()
     private let todoTitle = UILabel()
-    public let todoTextView = UITextView()
-    
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutBaseView()
@@ -52,7 +52,6 @@ class DetailEditView: SpringView {
         
         // 日付タイトル
         dayDetailTitle.textColor = UIColor(red: 0.1441, green: 0.3364, blue: 0.8777, alpha: 1)
-        dayDetailTitle.text = "2019年8月15日"
         dayDetailTitle.font = UIFont(name: fontRictyBold, size: 30)
         dayDetailTitle.textAlignment = .center
         view.addSubview(dayDetailTitle)
@@ -84,7 +83,6 @@ class DetailEditView: SpringView {
         view.addSubview(circularSlider)
         
         // 時間テキスト
-        hourLbl.text = "0.0h"
         hourLbl.font = UIFont(name: fontRicty, size: 36)
         hourLbl.textAlignment = .center
         view.addSubview(hourLbl)
@@ -123,7 +121,7 @@ class DetailEditView: SpringView {
             height: frame.height*0.95 - Util.getStatusBarHeight() - Util.getSafeAreaBottom() - Util.getToolBarHeight()
         )
         view.center = center
-        view.center.y = center.y -  Util.getToolBarHeight()/2
+        view.center.y = center.y - Util.getToolBarHeight()/2
     }
     
     private func layoutDayDetailTitle() {
