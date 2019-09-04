@@ -66,7 +66,6 @@ class TopView: UIView {
         
         // タイトル
         dayDetailTitle.textColor = UIColor(red: 0.1441, green: 0.3364, blue: 0.8777, alpha: 1)
-        dayDetailTitle.text = "2019年8月15日"
         dayDetailTitle.font = UIFont(name: fontRictyBold, size: 18)
         dayDetailView.addSubview(dayDetailTitle)
         
@@ -98,7 +97,6 @@ class TopView: UIView {
         dayDetailView.addSubview(circularSlider)
         
         // 時間テキスト
-        dayDetailHour.text = "4.5h"
         dayDetailHour.font = UIFont(name: fontRicty, size: 18)
         dayDetailHour.textAlignment = .center
         dayDetailView.addSubview(dayDetailHour)
@@ -106,8 +104,9 @@ class TopView: UIView {
         // 詳細
         detailTextView.textColor = .black
         detailTextView.font = UIFont(name: fontRicty, size:18)
+        detailTextView.isEditable = false
         dayDetailView.addSubview(detailTextView)
-        
+
         // 編集ボタン
         editBtn.backgroundColor = .white
         editBtn.layer.borderWidth = 1.0
