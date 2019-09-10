@@ -20,12 +20,16 @@ class TopViewController: BaseViewController {
     private let detailEditViewModel = DetailEditViewModel()
     private let disposeBag = DisposeBag()
     
+    var count = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         topView = TopView(frame:self.view.frame)
         topView.calendar.delegate = self
         topView.calendar.dataSource = self
+        topView.detailPagingView.delegate = self
+        topView.detailPagingView.dataSource = self
         self.view.addSubview(topView)
         
         editView = DetailEditView(frame:self.view.frame)
@@ -49,35 +53,25 @@ class TopViewController: BaseViewController {
         editView.doneBtn.rx.tap.subscribe(onNext: { _ in
             self.hideEditView()
         }).disposed(by: disposeBag)
-        
-        // カレンダータップ後に呼ばれる処理
-        topViewModel.calendarTapEvent.subscribe(onNext: { (detailView) in
-            self.redrawDetailView(detailView)
-        }).disposed(by: disposeBag)
     }
     
-    /**
-     * 編集画面を表示する
-     */
+    /// 編集画面を表示する
     private func showEditView() {
         self.editView.isHidden = false
         self.editView.animation = "fadeInUp"
         self.editView.animate()
     }
     
-    /**
-     * 編集画面を非表示にする
-     */
+    /// 編集画面を非表示にする
     private func hideEditView() {
         self.editView.animation = "fadeOut"
         self.editView.force = 5.0
         self.editView.animate()
     }
-    
-    /**
-     * 編集画面の時計を描画し直す
-     * @param CGFloat スライダーの値
-     */
+
+    /// 編集画面の時計を描画し直す
+    ///
+    /// - Parameter endPointValue: スライダーの値
     private func redrawEditViewHourCircle(endPointValue:CGFloat) {
         let hourCircleColors = detailEditViewModel.getHourCircleColorsByHour(endPointValue: endPointValue)
         self.editView.circularSlider.diskColor = hourCircleColors.disk
@@ -137,7 +131,9 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
      * カレンダータップ時の処理
      */
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
-        topViewModel.updateDetailView(date)
+        let detailView = topViewModel.updateDetailView(date)
+        self.redrawDetailView(detailView)
+        topView.detailPagingView.scrollToItem(at: IndexPath(row: count, section: 0), at: .left, animated: true)
     }
     
     /**
@@ -150,9 +146,37 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
     
     /**
      * 日付の文字色を設定
-     * @return UIColor?
      */
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
         return topViewModel.getHour(targetDate: date)
+    }
+}
+
+extension TopViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    // セクションごとのセル数
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return topView.detailPagingView.pageCount * 3
+    }
+    
+    // セルの設定
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("cell:\(indexPath)")
+        let cell:DetailCell = topView.detailPagingView.dequeueReusableCell(withReuseIdentifier: topView.detailPagingView.cellIdentifier, for: indexPath) as! DetailCell
+        
+        let today = Date()
+        let modifiedDate = Calendar.current.date(byAdding: .day, value: count, to: today)!
+        let detailView = topViewModel.updateDetailView(modifiedDate)
+        cell.dayDetailTitle.text = detailView.title
+        cell.dayDetailHour.text = detailView.hour
+        cell.detailTextView.text = detailView.detail.joined(separator: "\n")
+
+        // 編集ボタンタップ時
+        cell.editBtn.rx.tap.subscribe(onNext: { _ in
+            self.showEditView()
+            let detail = self.detailEditViewModel.getDetail(cell.dayDetailTitle.text!)
+            self.redrawDetailEditView(detail)
+        }).disposed(by: disposeBag)
+        count += 1
+        return cell
     }
 }

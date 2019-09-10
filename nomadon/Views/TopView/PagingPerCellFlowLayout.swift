@@ -9,16 +9,13 @@
 import UIKit
 
 class PagingPerCellFlowLayout: UICollectionViewFlowLayout {
-    private let largeFlickVelocityThreshold: CGFloat = 2.0
-    private let minimumFlickVelocityThreshold: CGFloat = 0.5
-    private let pageWidth: CGFloat = 0.0
 
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-
         guard let collectionView = collectionView else {
             return proposedContentOffset
         }
-
+        let largeFlickVelocityThreshold: CGFloat = 2.0
+        let minimumFlickVelocityThreshold: CGFloat = 0.5
         let pageWidth = itemSize.width + minimumLineSpacing
         let currentPage = collectionView.contentOffset.x / pageWidth
 
