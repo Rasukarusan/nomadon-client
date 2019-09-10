@@ -18,16 +18,14 @@ struct DetailView {
 
 class TopViewModel {
     
-    private let calendarTapEventSubject = PublishSubject<DetailView>()
-    public var calendarTapEvent: Observable<DetailView> { return calendarTapEventSubject }
     private let formatter = DateFormatter()
     
-    func updateDetailView(_ date :Date) {
+    func updateDetailView(_ date :Date) -> DetailView{
         let title = self.getTitle(date)
         let hour = self.getHour(targetDate: date)
         let detail = self.getDetail(targetDate: date)
         let detailView = DetailView(title: title, hour: hour, detail: detail)
-        calendarTapEventSubject.onNext(detailView)
+        return detailView
     }
     
     /**
