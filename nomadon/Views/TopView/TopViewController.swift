@@ -105,20 +105,18 @@ class TopViewController: BaseViewController {
         self.editView.todoTextView.text = detailView.detail.joined(separator: "\n")
         self.editView.dayDetailTitle.sizeToFit()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         topViewModel.updateDetailView(Date())
-        
-        // ToolBar
-        let toolBar = buildToolBar()
-        changeImageSelected(toolBar: toolBar, type: .home)
-        changeColorSelected(toolBar: toolBar, type: .home)
-        self.view.addSubview(toolBar)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let toolBar = buildToolBar()
+        changeImageSelected(toolBar: toolBar, type: .home)
+        changeColorSelected(toolBar: toolBar, type: .home)
+        self.view.addSubview(toolBar)
     }
 }
 
