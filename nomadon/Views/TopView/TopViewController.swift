@@ -80,15 +80,13 @@ class TopViewController: BaseViewController {
         self.editView.circularSlider.trackFillColor = hourCircleColors.trackFill
         self.editView.circularSlider.endThumbStrokeColor = hourCircleColors.endThumbStroke
         self.editView.circularSlider.endThumbStrokeHighlightedColor = hourCircleColors.endThumbStrokeHighlighted
-
         let hour = detailEditViewModel.calculateHour(endPointValue: endPointValue)
         self.editView.hourLbl.text = hour.description + "h"
     }
     
-    /**
-     * 詳細画面を更新する
-     * @param DetailView 更新後の詳細画面オブジェクト
-     */
+    /// 詳細画面を更新する
+    ///
+    /// - Parameter detailView: 詳細画面オブジェクト
     private func redrawDetailView(_ detailView : DetailView) {
         self.topView.dayDetailTitle.text = detailView.title
         self.topView.dayDetailHour.text = "\(detailView.hour)h"
@@ -97,10 +95,9 @@ class TopViewController: BaseViewController {
         self.topView.dayDetailTitle.sizeToFit()
     }
     
-    /**
-     * 詳細編集画面を更新する
-     * @param DetailView 更新後の詳細画面オブジェクト
-     */
+    /// 詳細編集画面を更新する
+    ///
+    /// - Parameter detailView: 詳細画面オブジェクト
     private func redrawDetailEditView(_ detailView : DetailView) {
         self.editView.dayDetailTitle.text = detailView.title
         self.editView.hourLbl.text = "\(detailView.hour)h"
@@ -138,7 +135,6 @@ extension TopViewController : FSCalendarDelegateAppearance, FSCalendarDataSource
     
     /**
      * 日付の文字色を設定
-     * @return UIColor?
      */
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         return topViewModel.getColorForDate(date)

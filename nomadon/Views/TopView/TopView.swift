@@ -56,8 +56,6 @@ class TopView: UIView {
                 - frame.height/25
                 - Util.getStatusBarHeight()
         ))
-
-        detailPagingView.contentInset = .zero
         self.addSubview(detailPagingView)
     }
 
@@ -71,18 +69,7 @@ class TopView: UIView {
     }
     
     private func layoutDetailPagingView() {
-//        detailPagingView.frame = CGRect(
-//            x: 0,
-//            y: Util.getStatusBarHeight(),
-//            width: frame.width - frame.width/13,
-//            height: frame.height/2
-//                - frame.height/25
-//                - Util.getStatusBarHeight()
-////                - Util.getSafeAreaBottom()
-//        )
         detailPagingView.center.x = self.center.x
-//        detailPagingView.backgroundColor = .green
     }
-    
 }
 
