@@ -26,8 +26,6 @@ class DetailPagingView: UICollectionView {
         layout.itemSize = CGSize(width: frame.width, height: frame.height)
         layout.scrollDirection = .horizontal
         self.init(frame: frame, collectionViewLayout: layout)
-        self.showsHorizontalScrollIndicator = false
-        self.backgroundColor = .clear
     }
 }
 
