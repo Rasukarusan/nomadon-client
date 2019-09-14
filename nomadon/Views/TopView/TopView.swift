@@ -48,6 +48,8 @@ class TopView: UIView {
         calendar.appearance.subtitleTodayColor = .black
         self.addSubview(calendar)
         
+        // CellのframeがCollectionViewのframeに依存している(初期化と同時にCellも生成している)ため、
+        // 初期化と同時にframeを指定する必要がある
         detailPagingView = DetailPagingView(frame:CGRect(
             x: 0,
             y: Util.getStatusBarHeight(),
@@ -56,6 +58,8 @@ class TopView: UIView {
                 - frame.height/25
                 - Util.getStatusBarHeight()
         ))
+        detailPagingView.showsHorizontalScrollIndicator = false
+        detailPagingView.backgroundColor = .clear
         self.addSubview(detailPagingView)
     }
 
