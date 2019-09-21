@@ -1,9 +1,0 @@
-{
-  "commitish" : "0.3.0",
-  "iOS" : [
-    {
-      "name" : "CalculateCalendarLogic",
-      "hash" : "e9deda92c0e14235e3767fb83d28943c62d7291304c110bedaf491fe1ffd5ff4"
-    }
-  ]
-}
